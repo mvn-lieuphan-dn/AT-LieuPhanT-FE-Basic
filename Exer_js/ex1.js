@@ -4,7 +4,6 @@ function ex1 (a, b){
   return c;
 }
 console.log("ket qua cau 1: " + ex1(5,10));
-
 //exercise 2
 function ex2 (x){
 if(x <= 19) {
@@ -15,7 +14,6 @@ else {
 }
 }
 console.log("ket qua bai 2: "+ ex2(22));
-
 //exercise 3
 function ex3(num){
   var arr = [];
@@ -41,5 +39,3 @@ function ex4(num){
   return Array;
 }
 console.log("ket qua bai 4 : " + ex4('1234567890*'));
-
-
