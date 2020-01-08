@@ -39,6 +39,7 @@
   display: flex;
   flex-direction: column;
   padding: 10px;
+ 
 }
 .name-page{
   font-size: 20px;
@@ -51,7 +52,7 @@
   color: #0d1d25;
   font-family: 'utm-avo';
 }
-.contact{
+.header-top-contact{
   width: 50%;
   display: flex;
   margin-left: auto;
