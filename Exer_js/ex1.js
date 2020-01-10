@@ -3,9 +3,7 @@ function ex1(a, b) {
   if (a === b) {
     return 3 * (a + b);
   }
-  else {
-    return a + b;
-  }
+  return a + b;
 }
 console.log("Ket qua bai 1: " + ex1(5, 10));
 console.log("Ket qua bai 1: " + ex1(5, 5));
@@ -14,9 +12,7 @@ function ex2(x) {
   if (x <= 19) {
     return 19 - x;
   }
-  else {
-    return (x - 19) * 3
-  }
+  return (x - 19) * 3
 }
 console.log("Ket qua bai 2: " + ex2(12));
 console.log("Ket qua bai 2: " + ex2(19));
