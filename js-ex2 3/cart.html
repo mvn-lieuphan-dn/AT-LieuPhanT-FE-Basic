@@ -22,10 +22,6 @@
           <img class="contact__img" src="images/ph.png" alt="">
           <span class="contact__question"><i>Question for us?</i></span>
           <span class="contact__phone">0512345 678</span>
-          <div>
-            <a href="cart.html"><img class="icon-cart" src="images/cart.png"></a>
-            <a class="icon-amount">0</a>
-          </div>
         </div>
       </section>
       <section class="container section-menu">
@@ -50,6 +46,12 @@
   </header>
   <main class="main-page">
     <section class="section-banner"></section>
+    <section class="section-breadcrumb">
+      <ul class="container main-breadcrumb">
+        <li class="breadcrumb-item"><a class="breadcrumb-item-link" href="">Home</a></li>
+        <li class="breadcrumb-item"><a class="breadcrumb-item-link" href="">Cart</a></li>
+      </ul>
+    </section>
     <section class="container section-table">
       <h3 class="table-name">List product in cart</h3>
       <table class="table-cart" id = "js-card-list">
@@ -62,25 +64,26 @@
         <th>Sub Total</th>
         <th></th>
         </tr>
-        <tr>
-        <td></td>
+        <tbody id = js-card>
+        <!-- <td></td>
         <td></td>
         <td></td>
         <td class="td-quantity">
-          <input class="input-quantity" type="number" value="1">
+          <input class="input-quantity" type="number" value="1" min="1" max="100">
         </td>
         <td></td>
         <td></td>
         <td><img class="img-delete" src="images/download-removebg-preview.png" alt=""></td>
-        </tr>
+        </tr> -->
+        </tbody>
         <tr>
           <td></td>
           <td></td>
           <td></td>
           <td></td>
           <td>Total</td>
-          <td></td>
-          <td></td>
+          <td id="js-total"></td>
+          <td rowspan="2"></td>
         </tr>
       </table>
     </section>
@@ -123,5 +126,7 @@
         <span class="design-by">Design by <span class="dd-com">dd.com</span></span>
       </div>
     </section>
+    <script type="text/javascript" src="cart.js"></script>
 </body>
+
 </html>
