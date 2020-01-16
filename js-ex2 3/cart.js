@@ -36,9 +36,7 @@ function deleteCart(id) {
   for (var k = 0, length = cartList.length; k < length; k++) {
     console.log(cartList[k]);
     if (cartList[k].product.id === id) {
-      var ind = cartList.indexOf(cartList[k]);
-      console.log('index cart: ' + ind);
-      cartList.splice(ind, 1);
+      cartList.splice(k, 1);
       console.log(cartList);
       $ItemCart.innerHTML = [];
       localStorage.setItem('cart', JSON.stringify(cartList));
