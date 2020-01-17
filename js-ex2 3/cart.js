@@ -15,8 +15,10 @@ function listCart() {
       '<td>' + cartList[i].product.titleProduct + '</td>' +
       '<td><img class="img-cart-item" src="images/' + cartList[i].product.imgProduct + '"></td>' +
       '<td class="td-quantity">' + cartList[i].quantity + '</td>' +
-      '<td>' + cartList[i].product.price + '<td>' + count * priceCart + '</td></td><td><a onclick = "javascript:deleteCart(' + cartList[i].product.id + ')">' +
-      '<img class="img-delete" src="images/download-removebg-preview.png" alt=""></a></td>'
+      '<td>' + cartList[i].product.price + '<td>' + count * priceCart + 
+      '</td></td><td><button class="js-btn-delete" id = '+cartList[i].product.id+'>' +
+      //'</td></td><td><a onclick = "javascript:deleteCart(' + cartList[i].product.id + ')">' +
+      '<img class="img-delete" src="images/download-removebg-preview.png" alt=""></button></td>'
       + '</tr>';
   }
   document.getElementById('js-total').innerHTML = sumTotal();
@@ -29,21 +31,34 @@ function sumTotal() {
   }
   return sum;
 }
-
 listCart();
-function deleteCart(idPro) {
+
+function deleteCart(event) {
+  var idDel = event.currentTarget.id;
   var message = confirm("Do you want delete this product?");
   if (message === true) {
     for (var k = 0, length = cartList.length; k < length; k++) {
       console.log(cartList[k].product.id);
-      if (cartList[k].product.id === idPro) {
+      if (cartList[k].product.id === parseInt(idDel)) {
         cartList.splice(k, 1);
         $ItemCart.innerHTML = [];
         localStorage.setItem('cart', JSON.stringify(cartList));
         listCart();
+        clickBtnDel();
         return true;
       }
     }
+    clickBtnDel();
   }
   else return false;
 }
+function clickBtnDel(){
+  var del = document.getElementsByClassName('js-btn-delete');
+  console.log(del);
+  for(var l = 0, length = del.length; l < length; l++)
+  {
+  del[l].addEventListener('click', deleteCart, false);
+  }
+}
+clickBtnDel();
+  
