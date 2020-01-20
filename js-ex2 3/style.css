@@ -1,9 +1,9 @@
-@font-face{
+@font-face {
   font-family: 'utm-avo';
   src: url('font/utm-avo.woff') format('woff');
   src: url('font/utm-avo.woff')  format('truetype');
 }
-@font-face{
+@font-face {
   font-family: 'utm-avo-bold';
   src: url('font/utm-avobold.woff') format('woff'), 
   url('font/utm-avobold.woff')  format('truetype');
@@ -144,7 +144,7 @@ body {
   align-items: center;
   margin-left: auto;
 }
-.icon-menu-list{
+.icon-menu-list {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
@@ -250,7 +250,7 @@ body {
   
 }
 
-.btn-add-to-cart:hover{
+.btn-add-to-cart:hover {
   transform: scale(1.08);
   transition: all ease-in-out 0.5s;
 }
@@ -359,11 +359,11 @@ body {
   border-collapse: collapse;
 }
 
-td{
+td {
   text-align: center;
 }
 
-.img-delete{
+.img-delete {
   width: 40px;
 }
 
@@ -373,11 +373,11 @@ td{
 
 }
 
-.img-cart-item{
+.img-cart-item {
   width: 100px;
 }
 
-.row-table{
+.row-table {
   height: 40px;
   background-color: #ef9f30;
 }
