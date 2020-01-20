@@ -55,3 +55,9 @@ var products = [{
   price: 400
 }
 ];
+
+function countProCart(){
+  var arrCart = JSON.parse(localStorage.getItem('cart'));
+  document.getElementById('js-icon-amount').innerHTML = arrCart.length;
+}
+countProCart();

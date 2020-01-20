@@ -1,3 +1,11 @@
+var arrCart = [];
+if (!localStorage.getItem('cart')) {
+  localStorage.setItem('cart', JSON.stringify(arrCart));
+}
+else {
+  arrCart = JSON.parse(localStorage.getItem('cart'));
+}
+
 var $box = document.getElementById('js-product-list')
 
 var $tempLi, $tempImg, $tempContent, $tempH4, $tempButton, $tempSpan1, $tempSpan2;
@@ -35,11 +43,10 @@ function listproduct(){
     $tempDiv.appendChild($tempSpan2);
   
     $tempButton = document.createElement('button');
-    $tempButton.setAttribute('id', products[i].id);
-    // $tempButton = addEventListener('click', addCard, false);
+    $tempButton.setAttribute('id','pro-' + products[i].id);
     $tempButton.setAttribute('class', 'btn-add-to-cart');
     //$tempButton.setAttribute('onclick', 'addCard(this.id)');
-    $tempButton.addEventListener('click', addCard, false);
+    $tempButton.addEventListener('click', addCart, false);
     $tempContent = document.createTextNode('ADD TO CART');
     $tempButton.appendChild($tempContent);
   
@@ -49,41 +56,33 @@ function listproduct(){
   }
 }
 
-var card = [];
-if (!localStorage.getItem('cart')) {
-  localStorage.setItem('cart', JSON.stringify(card));
-}
-else {
-  card = JSON.parse(localStorage.getItem('cart'));
-}
-document.getElementById('js-icon-amount').innerHTML = card.length;
-function addCard() {
+function addCart() {
   var quantity = 1;
   var index;
   var idBtn = event.currentTarget.id;
   for (var i = 0, length = products.length; i < length; i++) {
-    if (parseInt(idBtn) === products[i].id) {
-      index = CountCard(card, products[i]);
+    if (idBtn === 'pro-' + products[i].id) {
+      index = CountCard(arrCart, products[i]);
       console.log(index);
       if (index !== -1) {
-        card[index].quantity += quantity;
-        console.log(card[index]);
+        arrCart[index].quantity += quantity;
+        console.log(arrCart[index]);
       }
       else {
         var product = products[i];
-        card.push({ product, quantity });
-        console.log('length' + card.length);
+        arrCart.push({product, quantity});
+        console.log('length' + arrCart.length);
       }
-      localStorage.setItem('cart', JSON.stringify(card));
+      localStorage.setItem('cart', JSON.stringify(arrCart));
     }
   }
-  document.getElementById('js-icon-amount').innerHTML = card.length;
+  document.getElementById('js-icon-amount').innerHTML = arrCart.length;
 }
-var cardProduct = JSON.parse(localStorage.getItem('cart'));
-function CountCard(card, p) {
+
+function CountCard(arrCart, pro) {
   var index = -1;
-  for (var j = 0; j < card.length; j++) {
-    if (p.id === card[j].product.id) {
+  for (var j = 0; j < arrCart.length; j++) {
+    if (pro.id === arrCart[j].product.id) {
       index = j;
     }
   }
