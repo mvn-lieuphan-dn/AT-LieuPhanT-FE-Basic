@@ -45,7 +45,7 @@ function listproduct(){
     $tempButton = document.createElement('button');
     $tempButton.setAttribute('id','pro-' + products[i].id);
     $tempButton.setAttribute('class', 'btn-add-to-cart');
-    //$tempButton.setAttribute('onclick', 'addCard(this.id)');
+    // $tempButton.setAttribute('onclick', 'addCard(this.id)');
     $tempButton.addEventListener('click', addCart, false);
     $tempContent = document.createTextNode('ADD TO CART');
     $tempButton.appendChild($tempContent);
@@ -64,7 +64,7 @@ function addCart() {
     if (idBtn === 'pro-' + products[i].id) {
       index = CountCard(arrCart, products[i]);
       console.log(index);
-      if (index !== -1) {
+      if (index >= 0) {
         arrCart[index].quantity += quantity;
         console.log(arrCart[index]);
       }
@@ -80,7 +80,7 @@ function addCart() {
 }
 
 function CountCard(arrCart, pro) {
-  var index = -1;
+  var index;
   for (var j = 0; j < arrCart.length; j++) {
     if (pro.id === arrCart[j].product.id) {
       index = j;

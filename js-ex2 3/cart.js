@@ -17,7 +17,7 @@ function listCart() {
       '<td class="td-quantity">' +  dataCart[i].quantity + '</td>' +
       '<td> &#36;' +  dataCart[i].product.price + '<td>	&#36;' + count * priceCart + 
       '</td></td><td><button class="js-btn-delete" id = "del-' +  dataCart[i].product.id+'">' +
-      //'</td></td><td><a onclick = "javascript:deleteCart(' +  dataCart[i].product.id + ')">' +
+      // '</td></td><td><a onclick = "javascript:deleteCart(' +  dataCart[i].product.id + ')">' +
       '<img class="img-delete" src="images/download-removebg-preview.png" alt=""></button></td>'
       + '</tr>';
   }
