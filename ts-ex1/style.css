@@ -250,11 +250,6 @@ body {
   
 }
 
-/* .btn-add-to-cart:hover{
-  transform: scale(1.08);
-  transition: all ease-in-out 0.5s;
-} */
-
 /* footer */                                                                                                                                        
 .page-footer {
   background-color: #0e252d;
@@ -359,7 +354,7 @@ body {
   border-collapse: collapse;
 }
 
-td{
+td {
   text-align: center;
 }
 
@@ -373,11 +368,11 @@ td{
 
 }
 
-.img-cart-item{
+.img-cart-item {
   width: 100px;
 }
 
-.row-table{
+.row-table {
   height: 40px;
   background-color: #ef9f30;
 }
