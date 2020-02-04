@@ -1,12 +1,16 @@
 var arrComment = [];
-if(!localStorage.getItem('COMMENT')) {
-  localStorage.setItem('COMMENT', JSON.stringify(arrComment));
+function getData() {
+  if(!localStorage.getItem('COMMENT')) {
+    localStorage.setItem('COMMENT', JSON.stringify(arrComment));
+  }
+  else arrComment = JSON.parse(localStorage.getItem('COMMENT'));
 }
-else arrComment = JSON.parse(localStorage.getItem('COMMENT'));
 
 var $itemComment = document.getElementById('js-comment-list');
  function listComment() {
+  getData(); 
    console.log(arrComment);
+   $itemComment.innerHTML = ''; 
    for(var i = 0, leng = arrComment.length; i < leng; i++) {
     $itemComment.innerHTML += '<li class="comment-item">' +
     '<a href=""><img class="comment-item-img" src="images/163-1636340_user-avatar-icon-avatar-transparent-user-icon-png.png" alt=""></a>' + 
@@ -20,6 +24,7 @@ var $itemComment = document.getElementById('js-comment-list');
 listComment();
 
 function clickAddComment() {
+  getData();
   var $createComment = document.getElementById('js-create-comment');
   $createComment.addEventListener('click', function() {
   console.log(arrComment);
@@ -36,6 +41,7 @@ function clickAddComment() {
 clickAddComment();
 
 function clickDelComment() {
+  getData();
   var idDel;
   var $delComment = document.getElementsByClassName('btn-del');
   for(var l = 0, leng = $delComment.length; l < leng; l++){
@@ -44,8 +50,7 @@ function clickDelComment() {
       for(var k = 0, leng = arrComment.length; k < leng; k++) {
         if(idDel === 'js-btn-del-' + k) {
           arrComment.splice(k, 1);
-          localStorage.setItem('COMMENT', JSON.stringify(arrComment));
-          $itemComment.innerHTML = '';          
+          localStorage.setItem('COMMENT', JSON.stringify(arrComment));         
         }
       }
       listComment();
