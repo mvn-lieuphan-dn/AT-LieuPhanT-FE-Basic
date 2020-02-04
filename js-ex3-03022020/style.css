@@ -18,7 +18,27 @@
   flex-wrap: nowrap;
 }
 
+.header-name-page {
+  margin-top: 20px;
+}
+
+.name-page {
+  color: chocolate;
+  font-size: 30px;
+}
+
 .header-logo {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.name-page-slogant {
+  margin: 10px 0px;
+  color: coral;
+  font-size: 20px;
+}
+
+.header-logo-img {
   width: 100px;
 }
 

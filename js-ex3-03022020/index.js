@@ -17,7 +17,7 @@ var $itemComment = document.getElementById('js-comment-list');
     '<div class="comment-item-content">' +
     '<h4 class="comment-item-name">Lieu phan</h4>' +
     '<span class="comment-item-description">'+ arrComment[i] +'</span>' +
-    '</div><button id="js-btn-del-' + i + '" class="btn-del"><img class="comment-item-btn" src="images/dele.jpg" alt=""></button>' +
+    '</div><button data-id="' + i + '" class="btn-del"><img class="comment-item-btn" src="images/dele.jpg" alt=""></button>' +
     '</li>' 
   }
  }
@@ -42,20 +42,15 @@ clickAddComment();
 
 function clickDelComment() {
   getData();
-  var idDel;
   var $delComment = document.getElementsByClassName('btn-del');
   for(var l = 0, leng = $delComment.length; l < leng; l++){
-    $delComment[l].addEventListener('click', function(event) {
-      idDel = event.currentTarget.id;
-      for(var k = 0, leng = arrComment.length; k < leng; k++) {
-        if(idDel === 'js-btn-del-' + k) {
-          arrComment.splice(k, 1);
-          localStorage.setItem('COMMENT', JSON.stringify(arrComment));         
-        }
-      }
+    $delComment[l].addEventListener('click', function() {
+      arrComment.splice(this.dataset.id, 1);
+      localStorage.setItem('COMMENT', JSON.stringify(arrComment));
       listComment();
       clickDelComment();
     })
   }
+
 }
 clickDelComment();
