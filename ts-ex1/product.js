@@ -8,7 +8,7 @@ else {
 function listProduct() {
     var $box = document.getElementById('js-product-list');
     for (var i = 0, leng = products.length; i < leng; i++) {
-        $box.innerHTML += "<li class=\"product-item\"> +\n    <img src=\"./images/ + " + products[i].imgProduct + " + \" class=\"product-card-img\"> +\n    <div class=\"product-card-content\"><h4 class=\"product-card-title\"> + " + products[i].titleProduct + " + </h4> +\n    <span class=\"product-card-description\"> + " + products[i].descriptionProduct + " + </span><br> + \n    <span class=\"product-card-price\"> Price: + " + products[i].price + " + </span> +\n    <button id=\"pro-+ " + products[i].id + " + \" class=\"btn-add-to-cart\">ADD TO CART</button> + \n    </div>";
+        $box.innerHTML += "<li class=\"product-item\">\n    <img src=\"./images/" + products[i].imgProduct + "\" class=\"product-card-img\">\n    <div class=\"product-card-content\"><h4 class=\"product-card-title\">" + products[i].titleProduct + "</h4>\n    <span class=\"product-card-description\">" + products[i].descriptionProduct + "</span><br>\n    <span class=\"product-card-price\"> Price:" + products[i].price + "</span>\n    <button id=\"pro-" + products[i].id + "\" class=\"btn-add-to-cart\">ADD TO CART</button> \n    </div>";
     }
 }
 listProduct();
@@ -48,7 +48,6 @@ function countCart(arrCart, pro) {
 }
 function clickAddCart() {
     var add = document.getElementsByClassName('btn-add-to-cart');
-    console.log('hihihi');
     for (var j = 0, leng = add.length; j < leng; j++) {
         add[j].addEventListener('click', addCart, false);
     }
