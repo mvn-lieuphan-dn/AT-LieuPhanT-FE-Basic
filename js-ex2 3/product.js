@@ -15,7 +15,7 @@ var $tempButton;
 var $tempSpan1;
 var $tempSpan2;
 var lengthProducts = products.length;
-function listproduct(){
+function listproduct() {
   for (var i = 0; i < lengthProducts; i++) {
     $tempLi = document.createElement('li');
     $tempLi.setAttribute('class', 'product-item');
