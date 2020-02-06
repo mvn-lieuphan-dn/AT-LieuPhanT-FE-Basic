@@ -6,11 +6,17 @@ else {
   arrCart = JSON.parse(localStorage.getItem('cart'));
 }
 
-var $box = document.getElementById('js-product-list')
-
-var $tempLi, $tempImg, $tempContent, $tempH4, $tempButton, $tempSpan1, $tempSpan2;
+var $box = document.getElementById('js-product-list');
+var $tempLi;
+var $tempImg;
+var $tempContent;
+var $tempH4;
+var $tempButton;
+var $tempSpan1;
+var $tempSpan2;
+var lengthProducts = products.length;
 function listproduct(){
-  for (var i = 0; i < products.length; i++) {
+  for (var i = 0; i < lengthProducts; i++) {
     $tempLi = document.createElement('li');
     $tempLi.setAttribute('class', 'product-item');
   
@@ -45,7 +51,6 @@ function listproduct(){
     $tempButton = document.createElement('button');
     $tempButton.setAttribute('id','pro-' + products[i].id);
     $tempButton.setAttribute('class', 'btn-add-to-cart');
-    // $tempButton.setAttribute('onclick', 'addCard(this.id)');
     $tempButton.addEventListener('click', addCart, false);
     $tempContent = document.createTextNode('ADD TO CART');
     $tempButton.appendChild($tempContent);
@@ -60,11 +65,11 @@ function addCart() {
   var quantity = 1;
   var index;
   var idBtn = event.currentTarget.id;
-  for (var i = 0, length = products.length; i < length; i++) {
+  for (var i = 0; i < lengthProducts; i++) {
     if (idBtn === 'pro-' + products[i].id) {
-      index = CountCard(arrCart, products[i]);
+      index = countProduct(arrCart, products[i]);
       console.log(index);
-      if (index >= 0) {
+      if (index !== -1) {
         arrCart[index].quantity += quantity;
         console.log(arrCart[index]);
       }
@@ -79,9 +84,10 @@ function addCart() {
   document.getElementById('js-icon-amount').innerHTML = arrCart.length;
 }
 
-function CountCard(arrCart, pro) {
-  var index;
-  for (var j = 0; j < arrCart.length; j++) {
+function countProduct(arrCart, pro) {
+  var index = -1;
+  var lengthArrCart = arrCart.length;
+  for (var j = 0; j < lengthArrCart; j++) {
     if (pro.id === arrCart[j].product.id) {
       index = j;
     }
