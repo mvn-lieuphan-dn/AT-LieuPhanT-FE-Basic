@@ -17,16 +17,19 @@ var $itemComment = document.getElementById('js-comment-list');
     '<div class="comment-item-content">' +
     '<h4 class="comment-item-name">Lieu phan</h4>' +
     '<span class="comment-item-description">'+ arrComment[i] +'</span>' +
-    '</div><button data-id="' + i + '" class="btn-del"><img class="comment-item-btn" src="images/dele.jpg" alt=""></button>' +
+    '</div><button data-id="' + i + '" class="btn-del"><i class="fa fa-minus-circle fa-2x"></i></button>' +
     '</li>' 
+    countComment();
   }
  }
 listComment();
 
 function clickAddComment() {
+
   getData();
   var $createComment = document.getElementById('js-create-comment');
   $createComment.addEventListener('click', function() {
+    // event.preventDefault();
   console.log(arrComment);
   if(document.getElementById('js-comment-news-input').value) {
   arrComment.push(document.getElementById('js-comment-news-input').value);
@@ -54,3 +57,7 @@ function clickDelComment() {
 }
 clickDelComment();
 
+function countComment() {
+  var $countComment = document.getElementById('js-count-comment');
+  $countComment.innerHTML = '<h2 id="js-count-comment" class="comment-title">Comment(' + arrComment.length + ')</h2>';
+}
