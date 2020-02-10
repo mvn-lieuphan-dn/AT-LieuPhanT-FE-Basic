@@ -14,26 +14,37 @@ var $tempH4;
 var $tempButton;
 var $tempSpan1;
 var $tempSpan2;
+var $tempDiv;
+var $tempDiv1;
+var $tempDiv2;
 var lengthProducts = products.length;
 function listproduct() {
   for (var i = 0; i < lengthProducts; i++) {
+    $tempDiv1 = document.createElement('div');
+    $tempDiv1.setAttribute('class', 'col-3 row');
+
     $tempLi = document.createElement('li');
     $tempLi.setAttribute('class', 'product-item');
-  
+    $tempDiv1.appendChild($tempLi);
+    
+    $tempDiv2 = document.createElement('div');
+    $tempDiv2.setAttribute('class', 'product-border');
+    $tempLi.appendChild($tempDiv2);
+
     $tempImg = document.createElement('img');
     $tempImg.setAttribute('src', './images/' + products[i].imgProduct);
     $tempImg.setAttribute('class', 'product-card-img');
-    $tempLi.appendChild($tempImg);
-  
+    $tempDiv2.appendChild($tempImg);
+    
     $tempDiv = document.createElement('div');
     $tempDiv.setAttribute('class', 'product-card-content');
-  
+    
     $tempH4 = document.createElement('h4');
     $tempContent = document.createTextNode(products[i].titleProduct);
     $tempH4.setAttribute('class', 'product-card-title');
     $tempH4.appendChild($tempContent);
+
     $tempDiv.appendChild($tempH4);
-  
     $tempSpan1 = document.createElement('span');
     $tempContent = document.createTextNode(products[i].descriptionProduct);
     $tempSpan1.setAttribute('class', 'product-card-description');
@@ -54,10 +65,12 @@ function listproduct() {
     $tempButton.addEventListener('click', addCart, false);
     $tempContent = document.createTextNode('ADD TO CART');
     $tempButton.appendChild($tempContent);
-  
+    
     $tempDiv.appendChild($tempButton);
-    $tempLi.appendChild($tempDiv);
-    $box.appendChild($tempLi);
+    $tempDiv2.appendChild($tempDiv);
+    $tempLi.appendChild($tempDiv2);
+    $tempDiv1.appendChild($tempLi);
+    $box.appendChild($tempDiv1);
   }
 }
 
