@@ -399,5 +399,5 @@ input[type="text"]:focus {
 }
 
 .footer-border {
-  border-top: 0.5px solid black;
+  border-top: 0.5px solid rgb(97, 90, 90);
 }
