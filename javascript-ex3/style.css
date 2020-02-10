@@ -29,11 +29,16 @@ body {
 }
 
 .row {
-  margin-bottom: 10px;
+  margin: 0px -10px;
 }
 
 .col-4 {
   width: 33.3333333%;
+}
+
+[class^='col-'] {
+  padding: 10px;
+  box-sizing: border-box;
 }
 /* header ============================ */
 .page-header {
@@ -97,7 +102,7 @@ body {
 }
 
 .menu-item-link:hover {
-  font-size: 18px;
+  color: #ffff;
 }
 /* main ==================================== */
 .section-main-title {
@@ -278,12 +283,17 @@ body {
   height: 50px;
   width: 50px;
   background-color: chocolate;
-  font-size: 42px;
   position: absolute;
   z-index: 1;
   right: 0px;
   margin: 10px;
   top: 67px;
+  font-size: 35px;
+  border: none;
+}
+
+.fa-plus {
+  color:#ffff;
 }
 
 .fa-minus-circle {
@@ -389,5 +399,5 @@ input[type="text"]:focus {
 }
 
 .footer-border {
-  border-top: 0.5px solid slategray;
+  border-top: 0.5px solid black;
 }
