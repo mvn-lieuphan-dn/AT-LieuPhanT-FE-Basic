@@ -15,20 +15,15 @@ var $tempButton;
 var $tempSpan1;
 var $tempSpan2;
 var $tempDiv;
-var $tempDiv1;
 var $tempDiv2;
 var lengthProducts = products.length;
 function listproduct() {
   for (var i = 0; i < lengthProducts; i++) {
-    $tempDiv1 = document.createElement('div');
-    $tempDiv1.setAttribute('class', 'col-3 row');
-
     $tempLi = document.createElement('li');
-    $tempLi.setAttribute('class', 'product-item');
-    $tempDiv1.appendChild($tempLi);
+    $tempLi.setAttribute('class', 'col-3 product-item');
     
     $tempDiv2 = document.createElement('div');
-    $tempDiv2.setAttribute('class', 'product-border');
+    $tempDiv2.setAttribute('class', 'product-wrap');
     $tempLi.appendChild($tempDiv2);
 
     $tempImg = document.createElement('img');
@@ -69,8 +64,7 @@ function listproduct() {
     $tempDiv.appendChild($tempButton);
     $tempDiv2.appendChild($tempDiv);
     $tempLi.appendChild($tempDiv2);
-    $tempDiv1.appendChild($tempLi);
-    $box.appendChild($tempDiv1);
+    $box.appendChild($tempLi);
   }
 }
 
