@@ -213,14 +213,16 @@ body {
   display: flex;
   justify-content: space-between;
   height: 50px;
-  font-size: 12px;
   text-transform: uppercase;
   align-items: center;
   background-color: #d9e4e9;
   padding-left: 15px;
   padding-right: 20px;
   color: #3e494f;
+}
+.section-aside-top .title-option .title-name-option {
   font-family: "utm-avo";
+  font-size: 12px;
 }
 .section-aside-top .title-option-switch {
   font-size: 22px;
@@ -245,17 +247,17 @@ body {
 }
 .section-aside-bottom .title-book {
   height: 80px;
-  font-size: 18px;
   text-transform: uppercase;
   align-items: center;
   background-color: #d9e4e9;
   padding-left: 15px;
   padding-right: 20px;
   color: #0d1d25;
-  font-family: "utm-avo-bold";
 }
 .section-aside-bottom .title-book .title-name-book {
   padding-top: 20px;
+  font-family: "utm-avo-bold";
+  font-size: 18px;
 }
 .section-aside-bottom .title-book .title-name-book::after {
   width: 25%;
