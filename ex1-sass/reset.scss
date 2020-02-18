@@ -1,4 +1,40 @@
-// @import url("style.css");
+@font-face {
+  font-family: 'utm-avo';
+  src: url('font/utm-avo.woff') format('woff');
+  src: url('font/utm-avo.woff') format('truetype');
+}
+
+@font-face {
+  font-family: 'utm-avo-bold';
+  src: url('font/utm-avobold.woff') format('woff');
+  src: url('font/utm-avobold.woff') format('truetype');
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.row {
+  padding-bottom: 20px;
+}
+
+[class^="col-"] {
+  padding: 10px;
+  @extend %border-box;
+}
+
 @for $i from 1 through 12 {
   .col-#{$i} {
     width: 100% / (12/$i);
