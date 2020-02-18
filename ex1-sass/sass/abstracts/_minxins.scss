@@ -1,0 +1,19 @@
+@mixin name-page ($font-size, $font-family) {
+  font-size: $font-size;
+  font-family: $font-family;
+}
+
+@mixin title-aside($h, $title-book: false) {
+  height: $h;
+  text-transform: uppercase;
+  align-items: center;
+  background-color: #d9e4e9;
+  padding-left: 15px;
+  padding-right: 20px;
+  @if($title-book == true) {
+    color: #0d1d25;
+  }
+  @else {
+    color:  #3e494f;
+  }
+}

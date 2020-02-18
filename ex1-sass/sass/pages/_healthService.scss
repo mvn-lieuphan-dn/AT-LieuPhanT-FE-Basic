@@ -1,0 +1,33 @@
+.content-right {
+  padding: 0px;
+  @extend %ul-li-wrap;
+}
+
+.services-item {
+  border: $border-color;
+  box-sizing: border-box;
+  position: relative;
+  &-img {
+    width: 100%;
+  }
+  &-name {
+    padding: 20px 20px 36px 20px;
+    .services-title {
+      margin-bottom: 9px;
+      color: #282828;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+    .services-details {
+      color: #282828;
+      font-size: 13px;
+    }
+  }
+}
+
+.img-switch {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 307px;
+}

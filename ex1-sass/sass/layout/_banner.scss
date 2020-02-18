@@ -1,0 +1,23 @@
+.section-banner {
+  @extend %flex;
+  align-items: center;
+  // background-color: green;
+  background-image: url('../images/banner.png');
+  height: 160px;
+  @extend %ul-li-wrap;
+}
+
+.main-breadcrumb {
+  .breadcrumb-item {
+    margin: 2px;
+    font-size: 12px;
+    text-transform: uppercase;
+    &-link {
+      color: #0d1d25;
+    }     
+  }
+  .breadcrumb-item + .breadcrumb-item::before {
+    padding: 16px;
+    content: "/";
+  }
+}

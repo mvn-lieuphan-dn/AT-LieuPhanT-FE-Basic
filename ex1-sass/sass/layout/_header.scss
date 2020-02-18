@@ -1,0 +1,86 @@
+.section-header-top {
+  @extend %flex-nowrap;
+  padding: 11px 10px;
+}
+
+.logo {
+  @extend %flex-nowrap;
+  &-img {
+    width: auto;
+  }
+  &-name {
+    width: 100%;
+    padding: 10px 14px;
+    color: $color-text;
+    &-title {
+      @include name-page(20px, 'utm-avo-bold');
+      text-transform: uppercase; 
+    }
+    &-slogant {
+      @include name-page(16px, 'utm-avo');
+      margin-top: 3px;
+    }
+  }
+}
+
+.contact {
+  @extend %flex;
+  margin-left: auto;
+  align-items: center;
+  &-question {
+    margin: 9px;
+    color: #686868;
+    font: {
+      size: 14px;
+      weight: bold; 
+      style: italic;
+    }
+  }
+  &-phone {
+    font-size: 18px;
+    color: #4cc1fc;
+    font-weight: bold;
+  }
+}
+
+.border-header {
+  border-top: $border-color;
+  border-bottom: $border-color;
+}
+
+.section-header-bottom {
+  @extend %flex-nowrap;
+  padding: 0px 10px;
+}
+
+.main-menu {
+  @extend %ul-li-wrap;
+}
+
+.menu-list {
+  align-items: center;
+  .menu-item {
+    padding: 22px 22px;
+    border-right: $border-color;
+    text-transform: uppercase;
+    &-link {
+      color: #8e8e8e;
+      font-size: 12px;
+    }
+    &-link:hover {
+      color: #62c6f8;
+    }
+  }
+}
+
+.icon-menu {
+  @extend %flex;
+  margin-left: auto;
+  align-items: center;
+  @extend %ul-li-wrap;
+  .icon-menu-list {
+    .icon-menu-item {
+      margin-right: 10px;
+    }
+  }
+}
