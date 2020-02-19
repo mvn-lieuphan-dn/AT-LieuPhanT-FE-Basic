@@ -29,7 +29,7 @@
   align-items: center;
   &-question {
     margin: 9px;
-    color: #686868;
+    color: $color-text-question;
     font: {
       size: 14px;
       weight: bold; 
@@ -38,7 +38,7 @@
   }
   &-phone {
     font-size: 18px;
-    color: #4cc1fc;
+    color: $color-primarily;
     font-weight: bold;
   }
 }
@@ -64,11 +64,11 @@
     border-right: $border-color;
     text-transform: uppercase;
     &-link {
-      color: #8e8e8e;
+      color: $color-border-hd;
       font-size: 12px;
     }
     &-link:hover {
-      color: #62c6f8;
+      color: $color-primarily;
     }
   }
 }

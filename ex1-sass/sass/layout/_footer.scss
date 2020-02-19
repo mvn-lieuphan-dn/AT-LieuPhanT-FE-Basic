@@ -1,6 +1,6 @@
 .page-footer {
-  background-color: #62c6f8;
-  color: #ffff;
+  background-color: $color-primarily;
+  color: $color-text-ft;
 }
 
 .section-footer-top {
@@ -45,7 +45,7 @@
 }
 
 .border-footer {
-  border-top: 1px solid #81d1f9;
+  border-top: 1px solid $color-border-ft;
 }
 
 .section-footer-end {
@@ -65,6 +65,6 @@
   margin-left: auto;
   padding-right: 20px;
   .dd-com {
-    color: #86ffbf;
+    color: $color-sub;
   }
 }

@@ -1,3 +1,22 @@
+@font-face {
+  font-family: "utm-avo";
+  src: url("../font/utm-avo.woff") format("woff");
+  src: url("../font/utm-avo.woff") format("truetype");
+}
+@font-face {
+  font-family: "utm-avo-bold";
+  src: url("../font/utm-avobold.woff") format("woff");
+  src: url("../font/utm-avobold.woff") format("truetype");
+}
+.btn {
+  width: 125px;
+  height: 45px;
+  background-color: #86ffbf;
+  color: #ffff;
+  font-size: 14px;
+  font-family: "utm-avo-bold";
+}
+
 [class^=col-] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -167,25 +186,6 @@ a {
   top: 307px;
 }
 
-.btn {
-  width: 125px;
-  height: 45px;
-  background-color: #4bbc56;
-  color: #ffff;
-  font-size: 14px;
-  font-family: "utm-avo-bold";
-}
-
-@font-face {
-  font-family: "utm-avo";
-  src: url("../font/utm-avo.woff") format("woff");
-  src: url("../font/utm-avo.woff") format("truetype");
-}
-@font-face {
-  font-family: "utm-avo-bold";
-  src: url("../font/utm-avobold.woff") format("woff");
-  src: url("../font/utm-avobold.woff") format("truetype");
-}
 .section-header-top {
   padding: 11px 10px;
 }
@@ -302,7 +302,6 @@ a {
 
 .dropdown-list {
   padding: 10px 20px;
-  color: #868e92;
 }
 .dropdown-list .drop-item {
   margin: 6px 7px;
