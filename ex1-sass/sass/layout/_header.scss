@@ -59,14 +59,17 @@
 
 .menu-list {
   align-items: center;
+
   .menu-item {
     padding: 22px 22px;
     border-right: $border-color;
     text-transform: uppercase;
+
     &-link {
       color: $color-border-hd;
       font-size: 12px;
     }
+
     &-link:hover {
       color: $color-primarily;
     }
@@ -78,9 +81,8 @@
   margin-left: auto;
   align-items: center;
   @extend %ul-li-wrap;
-  .icon-menu-list {
-    .icon-menu-item {
-      margin-right: 10px;
-    }
-  }
+  
+  .icon-menu-item {
+    margin-right: 10px;
+  } 
 }
