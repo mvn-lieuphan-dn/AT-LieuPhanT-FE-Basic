@@ -5,14 +5,17 @@
 .section-aside-top {
   @extend %ul-li-colum;
 }
+
 .title-option {
   @extend %flex;
   justify-content: space-between;
   @include title-aside(50px, false);
+
   .title-name-option {
     font-family: "utm-avo";
     font-size: 12px;
   }
+
   &-switch {
     font-size: 22px;
   }
@@ -20,11 +23,13 @@
 
 .dropdown-list {
   padding: 10px 20px;
-  // color: #868e92;
+  
   .drop-item {
     margin: 6px 7px;
+
     &-link {
       color: $color-text-aside;
+
       font: {
         size: 12px;
         family: 'utm-avo';
@@ -40,11 +45,13 @@
 
 .title-book {
   @include title-aside(80px, true);
+
   .title-name-book {
     padding-top: 20px;
     font-family: "utm-avo-bold";
     font-size: 18px;
   }
+  
   .title-name-book::after {
     width: 25%;
     display: block;

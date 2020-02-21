@@ -11,10 +11,12 @@
     margin: 2px;
     font-size: 12px;
     text-transform: uppercase;
+
     &-link {
       color: $color-text;
     }     
   }
+  
   .breadcrumb-item + .breadcrumb-item::before {
     padding: 16px;
     content: "/";

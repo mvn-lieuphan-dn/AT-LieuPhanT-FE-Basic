@@ -23,8 +23,10 @@
 .footer-list {
   #{$point}: disc;
   padding: 10px;
+
   .footer-item {
    margin: 7px 0px;
+
    &-link{
     @extend %footer-a;
    }
@@ -34,10 +36,12 @@
 .footer-list-end {
   #{$point}: none;
   padding-left: 0px;
+
   .footer-item {
     margin: 5px 0px 5px;
     @extend %flex;
     align-items: center;
+    
     &-link {
       margin-left: 5px;
     }
