@@ -1,0 +1,89 @@
+.form-group {
+  margin: 15px 0px;
+  padding-bottom: 20px;
+}
+
+.form-page {
+  display: none;
+}
+
+.form-control {
+  padding: 5px;
+  height: 35px;
+  border-radius: 10px;
+  font-size: map-get($map: $font-size, $key: font-md);
+  &:focus {
+    box-shadow: 2px 2px 10px map-get($map: $color, $key: primary)
+  }
+}
+
+.info-title {
+  font-size: map-get($map: $font-size, $key: font-md);
+  margin: 10px 0 10px 5px ;
+}
+
+.input-phone {
+  width: 80px;
+}
+
+.input-sms {
+  width: 20px;
+  height: 40px;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .6} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {
+    opacity: .6;
+    visibility: hidden;
+  } 
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.check-info {
+  width: 50%;
+}
+
+.log-error {
+  margin-top: 5px;
+  height: 30px;
+  box-shadow: 2px 2px 11px rgba(224, 32, 7, 0.2);
+  .show-error {
+    padding: 5px;
+  }
+}
+
+.form-info {
+  position: relative;
+  .log-error {
+    position: absolute;
+    top: 80px;
+    left: 0px;
+  }
+}
+
+.title-form {
+  font-size: map-get($map: $font, $key: font-lg);
+}
+
+.img-form {
+  width: 100%;
+}
+
+.error-info, .error-email, .error-pass, .error-phone, .error-sms {
+  display: none;
+}

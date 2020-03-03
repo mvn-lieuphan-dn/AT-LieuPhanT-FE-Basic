@@ -1,0 +1,40 @@
+$cl-blue: #62c6f8;
+$cl-l-blue: #81d1f9;
+$cl-l-green: #99cc00;
+$cl-green: #99ff33;
+$cl-white: #ffff;
+$cl-l-dark: #8e8e8e;
+$cl-dark: #686868;
+$cl-w-dark: rgb(248, 240, 240);
+$cl-l-black: #30393f;
+$cl-black: #282828;
+
+// name color
+$color:(
+  primary: $cl-green,
+  secondary: $cl-l-green,
+  link: $cl-l-blue,
+  normal: $cl-white,
+  accent: $cl-green
+);
+
+// font
+$font-utm-avo: "utm-avo", Arial, Helvetica, sans-serif;
+$font-utm-avo-bold:"utm-avo-bold", Arial, Helvetica, sans-serif;
+$font-arial: Arial, Helvetica, sans-serif;
+
+$font:(
+  primary: $font-utm-avo,
+  secondary: $font-arial,
+  accent: $font-utm-avo-bold
+);
+
+// font-size 
+$font-size:(
+  font-xl: 20px,
+  font-lg: 18px,
+  font-md: 16px,
+  font-sm: 14px,
+  font-xm: 13px,
+  font-xxm: 12px
+);

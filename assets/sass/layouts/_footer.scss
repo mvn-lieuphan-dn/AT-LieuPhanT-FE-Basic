@@ -1,0 +1,52 @@
+.footer-page {
+  border-top: 0.5px solid grey;
+  background-color: map-get($map: $color, $key: secondary);
+}
+
+.title-footer {
+  font-size: map-get($map: $font-size, $key: font-lg);
+  font-family: map-get($map: $font, $key: accent);
+  color: map-get($map: $color, $key: normal);
+}
+
+.item-detail {
+  margin: 10px 0;
+  &-link {
+    color: map-get($map: $color, $key: normal);
+    &:hover {
+      color: $cl-black;
+    }
+  }
+}
+
+.footer-page {
+  .icon-item {
+    .fab {
+      color: map-get($map: $color, $key: normal);
+    }
+  }
+}
+
+.name-input {
+  font-size: map-get($map: $font-size, $key: font-xl);
+}
+
+.input-footer{
+  margin-top: 10px;
+  &-email {
+    height: 50px;
+    width: 80%;
+  }
+  .btn-footer-plane {
+    width:20%;
+  }
+}
+
+.text-footer {
+  color: map-get($map: $color, $key: normal);
+}
+
+.log-error {
+  border-radius: 10px;
+  
+}

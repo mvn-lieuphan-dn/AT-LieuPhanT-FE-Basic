@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/fontawesome-free-5.12.1-web/css/all.css">
+  <link rel="stylesheet" href="assets/sass/style.css">
+  <title>REGISTER</title>
+</head>
+<body>
+  <header class="header-page">
+    <div class="container">
+      <section class="d-flex pd-2 section-header">
+        <section class="d-flex flex-wrap section-header-left">
+          <img class="img-logo" src="./assets/images/logo1-removebg-preview.jpg" alt="">
+        </section>
+        <nav class="d-flex align-center ml-auto menu-main">
+          <ul class="d-flex flex-wrap menu-list">
+            <li class="pd-2 menu-item"><a class="menu-item-link" href="">Home</a></li>
+            <li class="pd-2 menu-item"><a class="menu-item-link" href="">List Product</a></li>
+            <li class="pd-2 menu-item"><a class="menu-item-link" href="">Product Category</a></li>
+            <li class="pd-2 menu-item"><a class="menu-item-link" href="">Shop</a></li>
+            <li class="pd-2 menu-item"><a class="menu-item-link" href="">Contact</a></li>
+            <li class="pd-2 menu-item"><a class="menu-item-link" href="">Pay</a></li>
+            <li class="pd-2 menu-item"><a class="menu-item-link" href=""><i class="fa fa-user-circle"></i>Login</a></li>
+            <li class="pd-2 menu-item"><a class="menu-item-link" href=""><i class="fa fa-user-plus"></i>Logup</a></li>
+          </ul>
+        </nav>
+      </section>
+    </div>
+  </header>
+  <main class="main-page">
+    <div class="container">
+      <section class="f-row section-main mb-6 mt-6">
+        <section class="f-col-6">
+          <img class="img-banner" src="assets/images/banner.png" alt="">
+        </section>
+        <section class="f-col-6">
+          <section class="f-row  pb-6 section-main-content">
+           <section class="f-col-12 section-form">
+            <section class="pt-6 pd-4 section-switch-page">
+              <h2 class="d-flex jc-center mg-3 mb-6 title-page txt-xl txt-uppercase">Register</h2>
+              <div class="d-flex flex-col mg-6 ta-center">
+                <ul class="d-flex flex-wrap button-list jc-between mg-auto">
+                  <li class="button-item">
+                    <button class="btn btn-switch" >1</button>
+                  </li>
+                  <li class="button-item">
+                    <button class="btn btn-switch" >2</button>
+                  </li>
+                  <li class="button-item">
+                    <button class="btn btn-switch" >3</button>
+                  </li>
+                  <li class="button-item" id="js-switch4">
+                    <button class="btn btn-switch" >4</button>
+                  </li>
+                  <li class="button-item" id="js-switch5">
+                    <button class="btn btn-switch" id="js-switch5">5</button>
+                  </li>
+              </ul>
+              </div>
+            </section>
+            <form action="" id="regForm" class="form-main">
+            <div class="pd-6 form-page js-tab fade" id="inputform" action="">
+              <div class="f-row form-group">
+                <div class="f-col-6 form-item">
+                  <div class="mr-2 d-flex flex-col form-info">
+                    <label for="" class="info-title" >First Name:</label>
+                    <input type="text" placeholder="You need enter first name " class="form-control" id="js-first-name" required>
+                    <div class="error-info log-error"><p class="show-error">Please! do not leave this field empty.</p></div>
+                  </div>
+                </div>
+                <div class="f-col-6 form-item">
+                  <div class="ml-2 d-flex flex-col form-info">
+                    <label for="" class="info-title">Last Name:</label>
+                    <input type="text" class="form-control" placeholder="You need enter last name" id="js-last-name" required>
+                    <div class="error-info log-error"><p class="show-error">Please! do not leave this field empty.</p></div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex flex-col form-group form-info">
+                <label for="" class="info-title">Email:</label>
+                <input id="js-email" type="text" class="form-control" placeholder="You need enter email" id="js-email" required>
+                  <div class="error-info log-error"><p class="show-error">Please! do not leave this field empty.</p></div>
+                  <div id="error-email" class="error-email log-error"><p class="show-error">Email error !!!</p></div>
+              </div>
+              <div class="d-flex flex-col form-group form-info">
+                <label for="" class="info-title">Password:</label>
+                <input id="js-pass" type="text" class="form-control" placeholder="You need enter password" required>
+                <div class="error-info log-error"><p class="show-error">Please! do not leave this field empty.</p></div>
+              </div>
+              <div class="d-flex flex-col form-group form-info">
+                <label for="" class="info-title">* Confirm Password:</label>
+                <input id="js-pass-conf" type="text" class="form-control"  placeholder="You need enter confirm password"  required>
+                <div class="error-info log-error"><p class="show-error">Please! do not leave this field empty.</p></div>
+                <div id="js-error-pass" class="error-pass log-error"><p class="show-error">Password does not match!</p></div>
+              </div>
+            </div>
+            <div action="" class="pd-6 form-page js-tab fade form-info">
+              <h3 class="d-flex jc-center title-form mg-4">Your Phone Number</h3>
+              <div class="d-flex flex-nowrap mg-auto jc-center form-group">
+                <input class="form-control input-phone" maxlength= "4" type="text" required>
+                <input class="form-control input-phone" maxlength= "3" type="text" required>
+                <input class="form-control input-phone" maxlength= "3" type="text" required>
+              </div>
+              <div id="js-error-phone" class="error-phone log-error"><p class="show-error">You have entered the wrong phone number! Phone number is 10 digits.</p></div>
+            </div>
+            <div action="" class="pd-6 form-page js-tab fade form-info">
+              <h3 class="d-flex jc-center title-form mg-4">SMS Code</h3>
+              <div class="d-flex jc-center mg-auto">
+                <input class="form-control input-sms mg-2" type="text" maxlength="1" required>
+                <input class="form-control input-sms mg-2" type="text" maxlength="1" required>
+                <input class="form-control input-sms mg-2" type="text" maxlength="1" required>
+                <input class="form-control input-sms mg-2" type="text" maxlength="1" required>
+              </div>
+              <div id="js-error-sms" class="error-sms log-error"><p class="show-error">You have entered the wrong code sms!</p></div>
+            </div>
+            <div action="" class="pd-6 form-page js-tab fade form-info">
+              <h3 class="d-flex jc-center title-form mg-4">Check your information!</h3>
+              <div class="check-info d-flex flex-col mg-auto">
+                <div class="d-flex">
+                  <label class="info-title" for="">First Name:</label>
+                  <span class="info-detail" id="js-c-fname"></span>
+                </div>
+                <div class="d-flex">
+                  <label class="info-title" for="">Last Name:</label>
+                  <span class="info-detail" id="js-c-lname"></span>
+                </div>
+                <div class="d-flex">
+                  <label class="info-title" for="">Email:</label>
+                  <span class="info-detail" id="js-c-email"></span>
+                </div>
+                <div class="d-flex">
+                  <label class="info-title" for="">Password:</label>
+                  <span class="info-detail" id="js-c-password"></span>
+                </div>
+                <div class="d-flex">
+                  <label class="info-title" for="">Phone:</label>
+                  <span class="info-detail" id="js-c-phone"></span>
+                </div>
+              </div>          
+            </div>
+            <div action="" class="form-page js-tab">
+              <img class="d-flex flex-wrap mg-auto pb-6 img-form" src="assets/images/thankyou.jpg" alt="">
+            </div>
+            <div class="d-flex flex-wrap jc-center mg-auto ">          
+            <input id="js-back" class="btn btn-back mg-4 txt-uppercase" onclick="nextTab(-1)" type="button" value="back">
+            <input id="js-next" class="btn btn-next mg-4 txt-uppercase" onclick="nextTab(1)" type="button" value="next">
+            </div>
+          </form>
+          </section>
+        </section>
+        </section>
+      </section>
+    </div>
+  </main>
+  <footer class="pd-2 footer-page">
+    <div class="container">
+      <section class="f-row section-footer">
+        <section class="f-col-8">
+          <ul class="f-row footer-list">
+            <li class="f-col-4 footer-item">
+              <h4 class="title-footer mt-2 mb-2 txt-uppercase">Keisha Dress</h4>
+              <ul class="footer-item-list">
+                <li class="item-detail"><a class="item-detail-link" href="">Box Office & There Center</a></li>
+                <li class="item-detail"><a class="item-detail-link" href="">325 Tudor Court</a></li>
+                <li class="item-detail"><a class="item-detail-link" href="">Glencoe, IL 60022</a></li>
+                <li class="item-detail"><a class="item-detail-link" href="">Open to the public, 10am - 5pm daily</a></li>
+              </ul>
+            </li>
+            <li class="f-col-4 footer-item">
+              <h4 class="title-footer mt-2 mb-2 txt-uppercase">Contact</h4>
+              <ul class="footer-item-list">
+                <li class="item-detail"><a class="item-detail-link" href="">PHONE 847-242-6000</a></li>
+                <li class="item-detail"><a class="item-detail-link" href="">EMAIL info@writerstheatre.org</a></li>
+                <li class="item-detail"><a class="item-detail-link" href="">Stay Connected</a></li>
+              </ul>
+            </li>
+            <li class="f-col-4 footer-item">
+              <h4 class="title-footer mt-2 mb-2 txt-uppercase">More Infor</h4>
+              <ul class="footer-item-list">
+                <li class="item-detail"><a class="item-detail-link" href="">Plays & Events</a></li>
+                <li class="item-detail"><a class="item-detail-link" href="">Plan Your Visit</a></li>
+                <li class="item-detail"><a class="item-detail-link" href="">Support</a></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section class="f-col-4">
+          <h4 class="title-footer mt-2 mb-2 txt-uppercase">Stay Connected</h4>
+          <p class="text-footer">Join over 14,000 people who receive behind-the-scenes articles,
+             videos, and photos, information on upcoming productions, ticket deals & more via our email lists.</p>
+          <div class="input-footer d-flex flex-wrap">
+            <input class="input-footer-email" type="textarea">
+            <button class="btn btn-footer-plane"><i class="fa fa-paper-plane fa-2x"></i></button>
+          </div>
+          <ul class="d-flex icon-list">
+            <li class="icon-item mg-2"><a href=""><i class="fab ta-center fa-facebook fa-2x"></i></a></li>
+            <li class="icon-item mg-2"><a href=""><i class="fab ta-center fa-twitter fa-2x"></i></li>
+            <li class="icon-item mg-2"><a href=""><i class="fab ta-center fa-instagram fa-2x"></i></a></li>
+            <li class="icon-item mg-2"><a href=""><i class="fab ta-center fa-pinterest-p fa-2x"></i></a></li>
+          </ul>
+        </section>
+      </section>
+    </div>
+  </footer>
+  <script src="index.js"></script>
+</body>
+</html>
