@@ -1,15 +1,19 @@
 .menu-item {
   &:nth-last-child(1), &:nth-last-child(2) {
-    border: 1px solid map-get($map: $color, $key: accent);
+    border: 1px solid map-get($map: $color, $key: primary);
     border-radius: 5px;
     margin: 0px 5px;
     
   }
 
   &:nth-last-child(1):focus, &:nth-last-child(2):focus {
-    background-color: map-get($map: $color, $key: accent);
+    background-color: map-get($map: $color, $key: secondary);
   }
   
+  &:nth-last-child(1):hover, &:nth-last-child(2):hover {
+    background-color: $cl-w-dark;
+  }
+
   &-link {
     font-family: map-get($map: $font, $key: primary);
     font-size: map-get($map: $font-size, $key: font-md);

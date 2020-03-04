@@ -1,24 +1,25 @@
 var currentTab = 0;
 showTab(currentTab);
+
 function showTab(n) {
   $tabs[n].style.display = 'block';
   if (n === 0) {
     $btnSwitch4.style.display = 'none';
     $btnSwitch5.style.display = 'none';
     $btnBack.style.display = 'none';
-    $btnList.style.width = '40%';
+    $btnList.style.width = '35%';
   } else {
     $btnSwitch4.style.display = 'flex';
     $btnSwitch5.style.display = 'flex';
     $btnBack.style.display = 'inline';
-    $btnList.style.width = '77%';
+    $btnList.style.width = '63.8%';
   }
   if (n == $tabs.length - 1) {
     $btnNext.innerHTML = 'Submit';
   } else {
     $btnNext.innerHTML = 'Next';
   }
-  fixBtnSwitch(n);
+  fixBtnSwitch(n - 1);
 }
 
 function fixBtnSwitch(n) {
@@ -26,7 +27,10 @@ function fixBtnSwitch(n) {
   for (i = 0; i < $btnSwitchs.length; i++) {
     $btnSwitchs[i].className = $btnSwitchs[i].className.replace(' active', '');
   }
-  $btnSwitchs[n].className += ' active';
+  if ($btnSwitchs[n]) {
+    $btnSwitchs[n].className += ' active';
+    $btnSwitchs[n].innerHTML = '<i class="fa fa-check"></i>'
+  }
 }
 
 var ramdom = ramdomSMS();
@@ -42,6 +46,7 @@ function ramdomSMS() {
 
 var arrInfo = [];
 var userInfo = {};
+
 function showInfo() {
   var $fName = document.getElementById('js-first-name');
   var $lName = document.getElementById('js-last-name');
@@ -51,8 +56,6 @@ function showInfo() {
     '<span class="info-detail" id="js-c-pass">' + $lName.value + '</span>';
   document.getElementById("js-c-email").innerHTML =
     '<span class="info-detail" id="js-c-pass">' + $emailValue.value + '</span>';
-  document.getElementById("js-c-password").innerHTML =
-    '<span class="info-detail" id="js-c-pass">' + $passConf.value + '</span>';
   userInfo = {
     fistName: $fName.value,
     lastName: $lName.value,
@@ -63,15 +66,14 @@ function showInfo() {
 }
 
 function nextTab(n) {
-  var $errorPhone= document.getElementById('js-error-phone');
-  
+  var $errorPhone = document.getElementById('js-error-phone');
+
   if (n === 1) {
     if (currentTab === 0 && validateInfo()) {
       $tabs[currentTab].style.display = 'none';
       currentTab = currentTab + 1;
       showTab(currentTab);
-    }
-    else if (currentTab === 1) {
+    } else if (currentTab === 1) {
       if (validatePhone()) {
         $tabs[currentTab].style.display = 'none';
         currentTab = currentTab + 1;
@@ -83,8 +85,7 @@ function nextTab(n) {
         console.log($errorPhone)
         $errorPhone.style.display = 'inline';
       }
-    }
-    else if (currentTab === 2) {
+    } else if (currentTab === 2) {
       if (validateCode()) {
         $tabs[currentTab].style.display = 'none';
         currentTab = currentTab + 1;
@@ -93,10 +94,13 @@ function nextTab(n) {
         $btnNext.value = 'submit';
         $errorCode.style.display = 'none';
       } else {
+        $btnNext.value = 'next';
         $errorCode.style.display = 'inline';
       }
     } else if (currentTab === 3) {
-      arrInfo.push({ userInfo });
+      arrInfo.push({
+        userInfo
+      });
       $tabs[currentTab].style.display = 'none';
       currentTab = currentTab + 1;
       showTab(currentTab);

@@ -34,15 +34,15 @@
   <main class="main-page">
     <div class="container">
       <section class="f-row section-main mb-6 mt-6">
-        <!-- <section class="f-col-6">
-          <img class="img-banner" src="assets/images/banner.png" alt="">
-        </section> -->
-        <section class="f-col-12">
-          <section class="f-row  pb-6 section-main-content">
+      <section class="f-col-6">
+        <img class="img-banner" src="assets/images/banner.png" alt="">
+      </section>
+        <section class="f-col-6">
+          <section class="f-row section-main-content">
             <section class="f-col-12 section-form">
               <section class="pt-6 pd-4 section-switch-page">
                 <h2 class="d-flex jc-center mg-3 mb-6 title-page txt-xl txt-uppercase">Register</h2>
-                <div class="d-flex mg-6 ta-center">
+                <div class="d-flex mt-6 ta-center">
                   <ul class="d-flex flex-wrap button-list jc-between mg-auto" id="js-button-list">
                     <li class="button-item align-center">
                       <button class="btn btn-switch">1</button>
@@ -67,7 +67,7 @@
                 </div>
               </section>
               <form action="" id="regForm" class="form-main" name="formName">
-                <div class="pd-6 form-page js-tab fade" id="inputform" action="">
+                <div class="pl-6 pr-6 form-page js-tab fade" id="inputform" action="">
                   <div class="f-row form-group">
                     <div class="f-col-6 form-item">
                       <div class="mr-2 d-flex flex-col form-info">
@@ -125,63 +125,70 @@
                   <div class="d-flex flex-nowrap mg-auto jc-center form-group">
                     <input id="js-phone1" class="form-control input-phone ta-center" maxlength="4"
                       oninput="autoTab(this, document.formName.phone2)" type="text" required>
+                    <span class="line-phone d-flex align-center">-</span>
                     <input id="js-phone2" class="form-control input-phone ta-center" maxlength="3"
                       oninput="autoTab(this, document.formName.phone3)" type="text" name="phone2" required>
+                      <span class="line-phone d-flex align-center">-</span>
                     <input id="js-phone3" class="form-control input-phone ta-center" maxlength="3"
                       oninput="autoTab(this, document.formName.next)" type="text" name="phone3" required>
                   </div>
-                  <div id="js-error-phone" class="error-phone log-error">
+                  <div id="js-error-phone" class="error-phone log-error jc-center">
                     <p class="show-error">You have entered the wrong phone number! Phone number is 10 digits.</p>
                   </div>
                 </div>
-                <div action="" class="pd-6 form-page js-tab fade form-sms">
-                  <h3 class="d-flex jc-center title-form mg-4">SMS Code</h3>
-                  <div class="d-flex jc-center mg-auto">
-                    <input id="js-code1" class="form-control input-sms mg-2 ta-center" type="text"
+                <div action="" class="form-page js-tab fade form-sms">
+                  <h3 class="pd-6 d-flex jc-center title-form mg-4">SMS Code</h3>
+                  <div class="d-flex jc-center mg-auto ">
+                    <input id="js-code1" class="form-control input-sms ta-center" type="text"
                       oninput="autoTab(this, document.formName.sms2)" name="sms1" maxlength="1" required>
-                    <input id="js-code2" class="form-control input-sms mg-2 ta-center" type="text"
+                      <span class="line-sms d-flex align-center">-</span>
+                    <input id="js-code2" class="form-control input-sms ta-center" type="text"
                       oninput="autoTab(this, document.formName.sms3)" name="sms2" maxlength="1" required>
-                    <input id="js-code3" class="form-control input-sms mg-2 ta-center" type="text"
+                      <span class="line-sms d-flex align-center">-</span>
+                    <input id="js-code3" class="form-control input-sms ta-center" type="text"
                       oninput="autoTab(this, document.formName.sms4)" name="sms3" maxlength="1" required>
-                    <input id="js-code4" class="form-control input-sms mg-2 ta-center" type="text"
+                      <span class="line-sms d-flex align-center">-</span>
+                    <input id="js-code4" class="form-control input-sms ta-center" type="text"
                       oninput="autoTab(this, document.formName.next)" name="sms4" maxlength="1" required>
                   </div>
-                  <div id="js-error-sms" class="error-sms log-error">
+                  <div id="js-error-sms" class="error-sms log-error jc-center">
                     <p class="show-error">You have entered the wrong code sms!</p>
                   </div>
                 </div>
-                <div action="" class="pd-6 form-page js-tab fade form-info">
+                <div action="" class="form-page js-tab fade form-info">
                   <h3 class="d-flex jc-center title-form mg-4">Check your information!</h3>
                   <div class="check-info d-flex flex-col mg-auto">
-                    <div class="d-flex align-center inf-item">
-                      <label class="info-title" for="">First Name:</label>
+                    <div class="d-flex align-center inf-item mg-2">
+                      <label class="info-title-check" for="">First Name:</label>
                       <span class="info-detail" id="js-c-fname"></span>
                     </div>
-                    <div class="d-flex align-center inf-item">
-                      <label class="info-title" for="">Last Name:</label>
+                    <div class="d-flex align-center inf-item mg-2">
+                      <label class="info-title-check" for="">Last Name:</label>
                       <span class="info-detail" id="js-c-lname"></span>
                     </div>
-                    <div class="d-flex align-center inf-item">
-                      <label class="info-title" for="">Email:</label>
+                    <div class="d-flex align-center inf-item mg-2">
+                      <label class="info-title-check" for="">Email:</label>
                       <span class="info-detail" id="js-c-email"></span>
                     </div>
-                    <div class="d-flex align-center inf-item">
-                      <label class="info-title" for="">Password:</label>
-                      <span class="info-detail" id="js-c-password"></span>
-                    </div>
-                    <div class="d-flex align-center inf-item">
-                      <label class="info-title" for="">Phone:</label>
+                    <div class="d-flex align-center inf-item mg-2">
+                      <label class="info-title-check" for="">Phone:</label>
                       <span class="info-detail" id="js-c-phone"></span>
                     </div>
+                  </div>
+                  <div class="d-flex jc-center mg-3">
+                    <span class="check-info-text">Click Submit to complete the registration!</span>
                   </div>
                 </div>
                 <div action="" class="form-page js-tab">
                   <img class="d-flex flex-wrap mg-auto pb-6 img-form" src="assets/images/thankyou.jpg" alt="">
+                  <div class="d-flex jc-center mg-3">
+                    <p class="thanks-text">Already have an account? <a href="" class="thanks-text-link">Sign In</a>.</p>
+                  </div>
                 </div>
                 <div class="d-flex flex-wrap jc-center mg-auto ">
-                  <input id="js-back" class="btn btn-back mg-4 txt-uppercase" onclick="nextTab(-1)" type="button"
+                  <input id="js-back" class="btn btn-back mg-2 txt-uppercase" onclick="nextTab(-1)" type="button"
                     value="back">
-                  <input id="js-next" class="btn btn-next mg-4 txt-uppercase" onclick="nextTab(1)" name="next"
+                  <input id="js-next" class="btn btn-next mg-2 txt-uppercase" onclick="nextTab(1)" name="next"
                     type="button" value="next">
                 </div>
               </form>
@@ -243,7 +250,7 @@
     </div>
   </footer>
   <!-- <script src="index.js"></script> -->
-  <script src="js/valiable.js"></script>
+  <script src="js/variable.js"></script>
   <script src="js/validate.js"></script>
   <script src="js/common.js"></script>
 </body>

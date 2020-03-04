@@ -3,10 +3,12 @@ function validateInfo() {
   var validMail = false;
   var validPass = false;
   var y = $tabs[currentTab].getElementsByTagName('input');
+  var arrInfoErr = [];
   for (var i = 0; i < y.length; i++) {
     if (y[i].value === '') {
       $errorInfo[i].style.display = 'block';
       validInfo = false;
+      console.log('false-info')
     } else {
       validInfo = true;
       $errorInfo[i].style.display = 'none';
@@ -14,7 +16,7 @@ function validateInfo() {
     if (i === 2) {
       var checkMail = validateEmail($emailValue.value);
       if (checkMail === false && y[i].value !== '') {
-        $errorEmail.style.display = 'inline';
+        $errorEmail.style.display = 'block';
         validMail = false;
       }
       else if (checkMail === false && y[i].value === '') {
@@ -48,7 +50,9 @@ function validateInfo() {
           }
         }
     }
+    arrInfoErr.push(validInfo);
   }
+  validInfo = arrInfoErr.every(item => item === true);
   return validInfo * validMail * validPass;
 }
 
@@ -73,4 +77,18 @@ function validatePhone() {
     }
   }
   return checkPhone;
+}
+
+function validateCode() {
+  var isValid = true;
+  var x = document.getElementsByClassName('js-tab')[3];
+  var y = x.getElementsByTagName('input');
+  var currentCode = "" + document.getElementById('js-code1').value +
+   document.getElementById('js-code2').value + 
+   document.getElementById('js-code3').value + 
+   document.getElementById('js-code4').value;
+  if (ramdom !== currentCode) {
+    isValid = false;
+  }
+  return isValid
 }

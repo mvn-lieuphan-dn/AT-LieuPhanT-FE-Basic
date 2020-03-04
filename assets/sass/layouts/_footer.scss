@@ -1,5 +1,6 @@
 .footer-page {
-  border-top: 0.5px solid grey;
+  border-top: 0.5px solid map-get($map: $color, $key: secondary);
+  box-shadow: 1px 1px 11px map-get($map: $color, $key: primary);
   background-color: map-get($map: $color, $key: secondary);
 }
 
