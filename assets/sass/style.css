@@ -235,7 +235,7 @@ h6 {
   background-color: #8e8e8e;
 }
 
-.btn-next:hover, .btn-back {
+.btn-next:hover, .btn-back:hover {
   box-shadow: 0 0 0 rgba(163, 177, 198, 0.6), 0 0 0 rgba(236, 240, 241, 0.6), 3px 3px 5px rgba(163, 177, 198, 0.6) inset, -3px -3px 3px rgba(255, 255, 255, 0.3) inset;
 }
 
@@ -342,12 +342,44 @@ h6 {
   left: 0px;
 }
 
+.form-number {
+  position: relative;
+}
+.form-number .log-error {
+  position: absolute;
+  top: 148px;
+  left: 70px;
+}
+
+.form-sms {
+  position: relative;
+}
+.form-sms .log-error {
+  position: absolute;
+  top: 170px;
+  left: 180px;
+}
+
 .img-form {
   width: 100%;
 }
 
 .error-info, .error-email, .error-pass, .error-phone, .error-sms {
   display: none;
+}
+
+.info-item {
+  margin: 5px;
+}
+
+.info-title {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.info-detail {
+  margin-left: 10px;
+  font-size: 18px;
 }
 
 .menu-item:nth-last-child(1), .menu-item:nth-last-child(2) {
@@ -370,7 +402,17 @@ h6 {
 }
 
 .button-list {
-  width: 40%;
+  width: 73%;
+}
+
+.line-switch {
+  border: 2px solid #99ff33;
+  width: 42px;
+  height: 0px;
+}
+
+.button-item {
+  display: flex;
 }
 
 .title-page {

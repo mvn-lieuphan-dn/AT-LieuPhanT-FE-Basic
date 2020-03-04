@@ -76,6 +76,24 @@
   }
 }
 
+.form-number {
+  position: relative;
+  .log-error {
+    position: absolute;
+    top: 148px;
+    left: 70px;
+  }
+}
+
+.form-sms {
+  position: relative;
+  .log-error {
+    position: absolute;
+    top: 170px;
+    left: 180px;
+  }
+}
+
 .title-form {
   font-size: map-get($map: $font, $key: font-lg);
 }
@@ -86,4 +104,18 @@
 
 .error-info, .error-email, .error-pass, .error-phone, .error-sms {
   display: none;
+}
+
+.info-item {
+  margin: 5px;
+}
+
+.info-title {
+  font-weight: 400;
+  font-size: map-get($map: $font-size, $key: font-lg);
+}
+
+.info-detail {
+  margin-left: 10px;
+  font-size: map-get($map: $font-size, $key: font-lg);
 }
