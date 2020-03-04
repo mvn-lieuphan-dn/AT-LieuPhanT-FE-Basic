@@ -11,7 +11,7 @@ function showTab(n) {
     $btnSwitch4.style.display = 'flex';
     $btnSwitch5.style.display = 'flex';
     $btnBack.style.display = 'inline';
-    $btnList.style.width = '73%';
+    $btnList.style.width = '77%';
   }
   if (n == $tabs.length - 1) {
     $btnNext.innerHTML = 'Submit';
