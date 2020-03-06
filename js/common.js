@@ -28,7 +28,7 @@ function fixBtnSwitch(n) {
     $btnSwitchs[i].className = $btnSwitchs[i].className.replace(' active', '');
   }
   if ($btnSwitchs[n]) {
-    $btnSwitchs[n].className += ' active';
+    $btnSwitchs[n + 1].className += ' active';
     $btnSwitchs[n].innerHTML = '<i class="fa fa-check"></i>'
   }
 }
