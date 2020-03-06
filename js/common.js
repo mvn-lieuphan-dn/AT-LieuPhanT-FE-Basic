@@ -29,7 +29,7 @@ function fixBtnSwitch(n) {
   }
   if ($btnSwitchs[n]) {
     $btnSwitchs[n + 1].className += ' active';
-    $btnSwitchs[n].innerHTML = '<i class="fa fa-check"></i>'
+    $btnSwitchs[n].innerHTML = '<i class="fa fa-check"></i>';
   }
 }
 
