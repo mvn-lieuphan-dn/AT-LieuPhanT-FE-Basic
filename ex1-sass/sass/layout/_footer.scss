@@ -1,45 +1,42 @@
 .page-footer {
-  background-color: $color-primarily;
-  color: $color-text-ft;
+  background-color: map-get($map: $color, $key: primary);
+  color: map-get($map: $color, $key: link);
 }
 
 .section-footer-top {
-  @extend %ul-li-wrap;
   padding-bottom: none;
 }
   
 .footer-top-list {
-  @extend %ul-li-colum;
   padding-bottom: 0px;
-  text-transform: uppercase;
 }
 
 .footer-top-title {
-  margin-top: 35px;; 
-  font-size: 18px;
-  font-family: 'utm-avo-bold';
+  color: map-get($map: $color, $key: link);
+  margin-top: 35px;
+  font-size: map-get($map: $font-size, $key: l);
+  font-family: map-get($map: $font-family, $key: secondary);
 }
       
 .footer-list {
-  #{$point}: disc;
-  padding: 10px;
+  list-style-type: disc;
+  padding: 10px; 
+}
 
   .footer-item {
    margin: 7px 0px;
 
    &-link{
-    @extend %footer-a;
+     color: map-get($map: $color, $key: link);
    }
   }
-}
 
 .footer-list-end {
-  #{$point}: none;
+  list-style-type: none;
   padding-left: 0px;
 
   .footer-item {
     margin: 5px 0px 5px;
-    @extend %flex;
     align-items: center;
     
     &-link {
@@ -49,15 +46,12 @@
 }
 
 .border-footer {
-  border-top: 1px solid $color-border-ft;
+  border-top: 1px solid map-get($map: $color, $key: normal);
 }
 
 .section-footer-end {
-  @extend %flex-nowrap;
   height: 55px;
   align-items: center;
-  text-transform: uppercase;
-  font-size: 12px;
 }
 
 .footer-end-left::before {
@@ -65,10 +59,7 @@
 }
   
 .footer-end-right {
-  @extend %flex;
-  margin-left: auto;
-  padding-right: 20px;
   .dd-com {
-    color: $color-sub;
+    color: map-get($map: $color, $key: accent);
   }
 }

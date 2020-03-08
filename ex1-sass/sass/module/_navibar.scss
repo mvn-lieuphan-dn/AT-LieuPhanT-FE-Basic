@@ -1,0 +1,13 @@
+.menu-item {
+  padding: 26px 22px;
+  border-right: 0.5px solid $cl-dark;
+
+  &-link {
+    color: $cl-l-dark;
+  }
+
+  &-link:hover {
+    color: map-get($map: $color, $key: primary);
+  }
+}
+

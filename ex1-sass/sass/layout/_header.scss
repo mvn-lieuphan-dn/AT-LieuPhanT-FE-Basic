@@ -1,88 +1,47 @@
-.section-header-top {
-  @extend %flex-nowrap;
-  padding: 11px 10px;
-}
-
 .logo {
-  @extend %flex-nowrap;
   &-img {
     width: auto;
   }
+
   &-name {
     width: 100%;
-    padding: 10px 14px;
-    color: $color-text;
+
     &-title {
-      @include name-page(20px, 'utm-avo-bold');
-      text-transform: uppercase; 
+      font-size: map-get($map: $font-size, $key: xl);
+      font-family: map-get($map: $font-family, $key: secondary);
     }
+
     &-slogant {
-      @include name-page(16px, 'utm-avo');
-      margin-top: 3px;
+      font-size: map-get($map: $font-size, $key: m);
+      font-family: map-get($map: $font-family, $key: primary);
     }
   }
 }
 
 .contact {
-  @extend %flex;
-  margin-left: auto;
-  align-items: center;
   &-question {
-    margin: 9px;
-    color: $color-text-question;
+    color: $cl-dark;
+
     font: {
-      size: 14px;
-      weight: bold; 
+      size: map-get($map: $font-size, $key: s);
+      weight: bold;
       style: italic;
     }
   }
   &-phone {
-    font-size: 18px;
-    color: $color-primarily;
-    font-weight: bold;
+    font: {
+      size: map-get($map: $font-size, $key: l);
+      weight: bold;
+    }
+
+    color: map-get($map: $color, $key: primary)
   }
 }
 
 .border-header {
-  border-top: $border-color;
-  border-bottom: $border-color;
+  border-top: 0.5px solid $cl-l-dark;
+  border-bottom: 0.5px solid $cl-l-dark;
 }
 
-.section-header-bottom {
-  @extend %flex-nowrap;
-  padding: 0px 10px;
-}
 
-.main-menu {
-  @extend %ul-li-wrap;
-}
 
-.menu-list {
-  align-items: center;
-
-  .menu-item {
-    padding: 22px 22px;
-    border-right: $border-color;
-    text-transform: uppercase;
-
-    &-link {
-      color: $color-border-hd;
-      font-size: 12px;
-    }
-
-    &-link:hover {
-      color: $color-primarily;
-    }
-  }
-}
-
-.icon-menu {
-  @extend %flex;
-  margin-left: auto;
-  align-items: center;
-  @extend %ul-li-wrap;
-  
-  .icon-menu-item {
-    margin-right: 10px;
-  } 
-}

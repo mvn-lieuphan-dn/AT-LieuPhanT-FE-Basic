@@ -1,41 +1,16 @@
-.content-left {
-  padding: 10px;
-}
-
-.section-aside-top {
-  @extend %ul-li-colum;
-}
-
 .title-option {
-  @extend %flex;
-  justify-content: space-between;
-  @include title-aside(50px, false);
+  padding: 15px 20px;
+  color: $cl-title-aside;
+  background-color: map-get($map: $color, $key: bg-form);
 
   .title-name-option {
-    font-family: "utm-avo";
-    font-size: 12px;
+    font-size: map-get($map: $font-size, $key: default);
+    font-family: map-get($map: $font-family, $key: primary);
   }
 
   &-switch {
-    font-size: 22px;
-  }
-}
-
-.dropdown-list {
-  padding: 10px 20px;
-  
-  .drop-item {
-    margin: 6px 7px;
-
-    &-link {
-      color: $color-text-aside;
-
-      font: {
-        size: 12px;
-        family: 'utm-avo';
-        weight: 600;
-      }
-    }
+    font-size: map-get($map: $font-size, $key: xl);
+    font-weight: 500;
   }
 }
 
@@ -44,23 +19,22 @@
 }
 
 .title-book {
-  @include title-aside(80px, true);
-
+  background-color: map-get($map: $color, $key: bg-form);
+  padding: 20px;
   .title-name-book {
-    padding-top: 20px;
-    font-family: "utm-avo-bold";
-    font-size: 18px;
+    font-family: map-get($map: $font-family, $key: secondary);
+    font-size: map-get($map: $font-size, $key: l);
   }
   
   .title-name-book::after {
     width: 25%;
     display: block;
-    border-bottom: 2px solid $color-primarily;
+    border-bottom: 2px solid map-get($map: $color, $key: primary);
     content: '';
     margin-top: 20px;
   }
 }
-      
-.btn-send {
-  margin-left: 65px;
+
+::placeholder {
+  color: #0d1d25;
 }
