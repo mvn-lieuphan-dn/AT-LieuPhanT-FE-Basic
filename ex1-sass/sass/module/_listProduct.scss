@@ -20,6 +20,7 @@
     .services-details {
       color: $cl-black;
       font-size: map-get($map: $font-size, $key: xs);
+      line-height: 1.5;
     }
   }
 }
@@ -28,5 +29,5 @@
   position: absolute;
   z-index: 1;
   right: 0;
-  top: 290px;
+  top: 95.5%;
 }

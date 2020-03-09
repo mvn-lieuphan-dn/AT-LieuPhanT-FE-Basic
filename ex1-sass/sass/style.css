@@ -322,7 +322,7 @@ h6 {
   list-style-type: disc;
   padding: 15px 35px;
   font-size: 16px;
-  color: #30393f;
+  color: #868e92;
 }
 .dropdown-list .drop-item {
   padding: 6px 7px;
@@ -397,13 +397,14 @@ h6 {
 .services-item-name .services-details {
   color: #282828;
   font-size: 13px;
+  line-height: 1.5;
 }
 
 .img-switch {
   position: absolute;
   z-index: 1;
   right: 0;
-  top: 290px;
+  top: 95.5%;
 }
 
 .section-page-content {
