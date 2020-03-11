@@ -39,20 +39,14 @@
   animation-duration: 3s;
 }
 
-@-webkit-keyframes fade {
-  from {opacity: .6} 
-  to {opacity: 1}
-}
-
 @keyframes fade {
   from {
-    opacity: .6;
-    visibility: hidden;
-  } 
-  to {
-    opacity: 1;
-    visibility: visible;
-  }
+   transform: translateX(50%);
+ }
+
+ to {
+   transform: translateX(0%);
+ }
 }
 
 .check-info {
