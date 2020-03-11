@@ -1,18 +1,3 @@
-// $border-color: 1px solid hsl(0, 0%, 91%);
-// $point: list-style-type;
-
-// $color-text: #0d1d25;
-// $color-primarily: p;
-// $color-border-ft: #81d1f9;
-// $color-sub: #86ffbf;
-// $color-sub2: #4bbc56;
-// $color-text-ft: #ffff;
-// $color-border-hd: #8e8e8e;
-// $color-text-question: #686868;
-// $color-br-form: #d9e4e9;
-// $color-text-aside: #30393f;
-// $color-text-services: #282828;
-// $color-text: #0d1d25;
 $cl-blue: #62c6f8;
 $cl-l-blue: #81d1f9;
 $cl-l-green: #86ffbf;
@@ -26,6 +11,7 @@ $cl-black: #282828;
 $cl-title-book: #0d1d25;
 $cl-title-aside: #3e494f;
 $cl-ul-drop: #868e92;
+$cl-bd-service: #ececec;
 // name color
 $color:(
   primary: $cl-blue,

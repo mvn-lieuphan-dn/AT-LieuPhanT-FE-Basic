@@ -246,10 +246,10 @@ h6 {
   font-size: 18px;
 }
 .title-book .title-name-book::after {
-  width: 25%;
   display: block;
-  border-bottom: 2px solid #62c6f8;
   content: "";
+  width: 25%;
+  border-bottom: 2px solid #62c6f8;
   margin-top: 20px;
 }
 
@@ -320,7 +320,7 @@ h6 {
 
 .dropdown-list {
   list-style-type: disc;
-  padding: 15px 35px;
+  padding: 20px 32px;
   font-size: 16px;
   color: #868e92;
 }
@@ -378,7 +378,7 @@ h6 {
 }
 
 .services-item {
-  border: 0.5px solid #8e8e8e;
+  border: 1px solid #ececec;
   box-sizing: border-box;
   position: relative;
 }
