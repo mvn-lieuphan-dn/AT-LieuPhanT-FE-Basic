@@ -1,0 +1,162 @@
+.form-group {
+  margin: 5px 0px;
+  padding-bottom: 20px;
+}
+
+.form-page {
+  display: none;
+}
+
+.form-control {
+  padding: 5px;
+  height: 35px;
+  border-radius: 10px;
+  font-size: map-get($map: $font-size, $key: font-md);
+  &:focus {
+    box-shadow: 2px 2px 10px map-get($map: $color, $key: primary)
+  }
+}
+
+.info-title {
+  font-size: map-get($map: $font-size, $key: font-md);
+  margin: 10px 0 10px 5px ;
+}
+
+.input-phone {
+  width: 80px;
+  margin-top: 10px;
+}
+
+.input-sms {
+  width: 20px;
+  height: 40px;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@keyframes fade {
+  from {
+   transform: translateX(50%);
+ }
+
+ to {
+   transform: translateX(0%);
+ }
+}
+
+.check-info {
+  width: 60%;
+  border: 1px solid $cl-l-dark;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.log-error {
+  margin-top: 5px;
+  height: 30px;
+  box-shadow: 2px 2px 11px rgba(224, 32, 7, 0.2);
+  .show-error {
+    padding: 5px;
+  }
+}
+
+.input-error {
+  box-shadow: 2px 2px 11px rgba(224, 32, 7, 0.2);
+}
+
+.form-info {
+  position: relative;
+  .log-error {
+    position: absolute;
+    top: 80px;
+    left: 0px;
+  }
+}
+
+.form-number {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  position: relative;
+  .log-error {
+    position: absolute;
+    top: 180px;
+    width: 90%;
+  }
+}
+
+.form-sms {
+  position: relative;
+  margin-bottom: 100px;
+  .log-error {
+    position: absolute;
+    top: 190px;
+    left: 168px;
+  }
+}
+
+.title-form {
+  font-weight: 600;
+  font-size: map-get($map: $font-size, $key: font-xxl);
+  font-style: italic;
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+
+.img-form {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.error-info, .error-email, .error-pass, .error-phone, .error-sms {
+  display: none;
+}
+
+.info-item {
+  margin: 5px;
+}
+
+.info-title {
+  font-weight: 400;
+  font-size: map-get($map: $font-size, $key: font-lg);
+}
+
+.info-detail {
+  margin-left: 10px;
+  font-size: map-get($map: $font-size, $key: font-lg);
+  font-style: italic;
+}
+
+.info-title-check {
+  font-weight: 600;
+  font-size: map-get($map: $font-size, $key: font-lg);
+  font-style: italic;
+}
+
+.line-phone, .line-sms {
+  font-size: map-get($map: $font-size, $key: font-xl);
+  font-weight: 800;
+  color: map-get($map: $color, $key: accent);
+  margin: 5px;
+}
+
+.check-info-text {
+  font-size: map-get($map: $font-size, $key: font-md);
+  color: $cl-l-dark;
+  font-style: italic;
+}
+
+.thanks-text {
+  font-size: map-get($map: $font-size, $key: font-md);
+  $color: $cl-l-dark;
+  font-style: italic;
+}
+
+.thanks-text-link {
+  //color: map-get($map: $color, $key: secondary);
+  color: map-get($map: $color, $key: link);
+}

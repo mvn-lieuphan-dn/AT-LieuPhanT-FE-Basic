@@ -1,0 +1,10 @@
+.f-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@for $i from 1 through 12 {
+  .f-col-#{$i} {
+    width: 100% / (12/$i);
+  }
+}
