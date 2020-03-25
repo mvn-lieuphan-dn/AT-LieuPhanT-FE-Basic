@@ -1,23 +1,21 @@
-<ng-container *ngIf="isToken == 1">
-  aaaaaaaaaa
-  <button (click)="getIsToken()">Back</button>
-  <ng-container *ngTemplateOutlet="logo"></ng-container>
-</ng-container>
-<ng-container *ngIf="isToken == 2">
-  bbbbbbbbbb
-  <button (click)="getIsToken()">Back</button>
-  <ng-container *ngTemplateOutlet="logo"></ng-container>
-</ng-container>
-<ng-container *ngIf="isToken == 3">
-  ccccccccc
-  <button (click)="getIsToken()">Back</button>
-  <ng-container *ngTemplateOutlet="logo"></ng-container>
-</ng-container>
-<ng-container *ngIf="isToken == 4">
-  cccccccccc
-  <button (click)="getIsToken()">Back</button>
-  <ng-container *ngTemplateOutlet="logo"></ng-container>
-</ng-container>
+<div>
+  <ng-container *ngIf="isToken == 1">
+    <img class ="img-tab" src="../../assets/images/img1.jpg" alt=""><br>
+  </ng-container>
+  <ng-container *ngIf="isToken == 2">
+    <img class ="img-tab" src="../../assets/images/img6.jpg" alt=""><br>
+  </ng-container>
+  <ng-container *ngIf="isToken == 3">
+    <img class ="img-tab" src="../../assets/images/img5.jpg" alt=""><br>
+  </ng-container>
+  <ng-container *ngIf="isToken == 4">
+    <img class ="img-tab" src="../../assets/images/img4.jpg" alt=""><br>
+  </ng-container>
+  <div class="footer-tab">
+  <ng-container *ngTemplateOutlet="logo"></ng-container> 
+    <button *ngIf="isToken == 4" class="btn-back" (click)="getIsToken()">Back</button>
+  </div>
+</div>
 <ng-template #logo>
   coppyright
 </ng-template>

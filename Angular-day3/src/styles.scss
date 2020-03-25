@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+.active {
+  background-color: gray;
+}
+
+.tab {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.img-tab {
+  width: 100%;
+  height: 500px;
+}
+
+.footer-tab {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btn-back {
+  display: flex;
+  margin-left: auto;
+}
