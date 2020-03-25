@@ -1,0 +1,39 @@
+.title-option {
+  padding: 15px 20px;
+  color: $cl-title-aside;
+  background-color: map-get($map: $color, $key: bg-form);
+
+  .title-name-option {
+    font-size: map-get($map: $font-size, $key: default);
+    font-family: map-get($map: $font-family, $key: primary);
+  }
+
+  &-switch {
+    font-size: map-get($map: $font-size, $key: xl);
+    font-weight: 500;
+  }
+}
+
+.section-aside-bottom {
+  margin-top: 40px;
+}
+
+.title-book {
+  background-color: map-get($map: $color, $key: bg-form);
+  padding: 20px;
+  .title-name-book {
+    font-family: map-get($map: $font-family, $key: secondary);
+    font-size: map-get($map: $font-size, $key: l);
+  }
+  
+  .title-name-book::after {
+    @include block-line;
+    width: 25%;
+    border-bottom: 2px solid map-get($map: $color, $key: primary);
+    margin-top: 20px;
+  }
+}
+
+::placeholder {
+  color: #0d1d25;
+}

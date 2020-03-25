@@ -1,0 +1,33 @@
+.services-item {
+  border: 1px solid $cl-bd-service;
+  box-sizing: border-box;
+  position: relative;
+
+  &-img {
+    width: 100%;
+  }
+
+  &-name {
+    padding: 20px 20px 36px 20px;
+
+    .services-title {
+      margin-bottom: 9px;
+      color: $cl-black;
+      font-weight: 700;
+      font-size: map-get($map: $font-size, $key: m),
+    }
+    
+    .services-details {
+      color: $cl-black;
+      font-size: map-get($map: $font-size, $key: xs);
+      line-height: 1.5;
+    }
+  }
+}
+
+.img-switch {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 95.5%;
+}

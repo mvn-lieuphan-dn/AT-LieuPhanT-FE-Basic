@@ -1,0 +1,65 @@
+.page-footer {
+  background-color: map-get($map: $color, $key: primary);
+  color: map-get($map: $color, $key: link);
+}
+
+.section-footer-top {
+  padding-bottom: none;
+}
+  
+.footer-top-list {
+  padding-bottom: 0px;
+}
+
+.footer-top-title {
+  color: map-get($map: $color, $key: link);
+  margin-top: 35px;
+  font-size: map-get($map: $font-size, $key: l);
+  font-family: map-get($map: $font-family, $key: secondary);
+}
+      
+.footer-list {
+  list-style-type: disc;
+  padding: 10px; 
+}
+
+  .footer-item {
+   margin: 7px 0px;
+
+   &-link{
+     color: map-get($map: $color, $key: link);
+   }
+  }
+
+.footer-list-end {
+  list-style-type: none;
+  padding-left: 0px;
+
+  .footer-item {
+    margin: 5px 0px 5px;
+    align-items: center;
+    
+    &-link {
+      margin-left: 5px;
+    }
+  }
+}
+
+.border-footer {
+  border-top: 1px solid map-get($map: $color, $key: normal);
+}
+
+.section-footer-end {
+  height: 55px;
+  align-items: center;
+}
+
+.footer-end-left::before {
+   content: '\0040';
+}
+  
+.footer-end-right {
+  .dd-com {
+    color: map-get($map: $color, $key: accent);
+  }
+}

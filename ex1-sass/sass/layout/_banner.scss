@@ -1,0 +1,17 @@
+.section-banner {
+  background-image: url('../images/banner.png');
+  height: 160px;
+}
+
+.main-breadcrumb {
+  .breadcrumb-item {
+    &-link {
+      color: $cl-l-black;
+    }     
+  }
+  .breadcrumb-item + .breadcrumb-item::before {
+    content: "/";
+    margin: 20px;
+  }
+}
+

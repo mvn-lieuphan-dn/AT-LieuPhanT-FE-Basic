@@ -1,0 +1,53 @@
+$cl-blue: #62c6f8;
+$cl-l-blue: #81d1f9;
+$cl-l-green: #86ffbf;
+$cl-green: #4bbc56;
+$cl-white: #ffff;
+$cl-l-dark: #8e8e8e;
+$cl-dark: #686868;
+$cl-w-dark: #d9e4e9;
+$cl-l-black: #30393f;
+$cl-black: #282828;
+$cl-title-book: #0d1d25;
+$cl-title-aside: #3e494f;
+$cl-ul-drop: #868e92;
+$cl-bd-service: #ececec;
+// name color
+$color:(
+  primary: $cl-blue,
+  secondary: $cl-green,
+  link: $cl-white,
+  normal: $cl-l-blue,
+  bg-form: $cl-w-dark,
+  accent: $cl-l-green
+);
+
+// map-get($color, primary);
+
+// font-family
+$font-utm-avo: "utm-avo", Arial, Helvetica, sans-serif;
+$font-utm-avo-bold:"utm-avo-bold", Arial, Helvetica, sans-serif;
+$font-arial: Arial, Helvetica, sans-serif;
+
+$font-family:(
+  primary: $font-utm-avo,
+  secondary: $font-utm-avo-bold,
+  default: $font-arial
+);
+
+// font-size
+$size-12: 12px;
+$size-13: 13px;
+$size-14: 14px;
+$size-16: 16px;
+$size-18: 18px;
+$size-20: 20px;
+
+$font-size:(
+  xl: $size-20,
+  l: $size-18,
+  m: $size-16,
+  s: $size-14,
+  xs: $size-13,
+  default: $size-12
+);

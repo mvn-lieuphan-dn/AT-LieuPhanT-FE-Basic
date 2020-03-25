@@ -1,0 +1,20 @@
+.dropdown-list {
+  list-style-type: disc;
+  padding: 20px 32px;
+  font-size: map-get($map: $font-size, $key: m);
+  color: $cl-ul-drop;
+
+  .drop-item {
+    padding: 6px 7px;
+
+    &-link {
+      color: $cl-l-black;
+
+      font: {
+        family: map-get($map: $font-family, $key: primary);
+        weight: 600;
+        size: map-get($map: $font-size, $key: default)
+      }
+    }
+  }
+}

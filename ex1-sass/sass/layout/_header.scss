@@ -1,0 +1,47 @@
+.logo {
+  &-img {
+    width: auto;
+  }
+
+  &-name {
+    width: 100%;
+
+    &-title {
+      font-size: map-get($map: $font-size, $key: xl);
+      font-family: map-get($map: $font-family, $key: secondary);
+    }
+
+    &-slogant {
+      font-size: map-get($map: $font-size, $key: m);
+      font-family: map-get($map: $font-family, $key: primary);
+    }
+  }
+}
+
+.contact {
+  &-question {
+    color: $cl-dark;
+
+    font: {
+      size: map-get($map: $font-size, $key: s);
+      weight: bold;
+      style: italic;
+    }
+  }
+  &-phone {
+    font: {
+      size: map-get($map: $font-size, $key: l);
+      weight: bold;
+    }
+
+    color: map-get($map: $color, $key: primary)
+  }
+}
+
+.border-header {
+  border-top: 0.5px solid $cl-l-dark;
+  border-bottom: 0.5px solid $cl-l-dark;
+}
+
+
+
