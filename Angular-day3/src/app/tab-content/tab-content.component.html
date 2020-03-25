@@ -1,0 +1,23 @@
+<ng-container *ngIf="isToken == 1">
+  aaaaaaaaaa
+  <button (click)="getIsToken()">Back</button>
+  <ng-container *ngTemplateOutlet="logo"></ng-container>
+</ng-container>
+<ng-container *ngIf="isToken == 2">
+  bbbbbbbbbb
+  <button (click)="getIsToken()">Back</button>
+  <ng-container *ngTemplateOutlet="logo"></ng-container>
+</ng-container>
+<ng-container *ngIf="isToken == 3">
+  ccccccccc
+  <button (click)="getIsToken()">Back</button>
+  <ng-container *ngTemplateOutlet="logo"></ng-container>
+</ng-container>
+<ng-container *ngIf="isToken == 4">
+  cccccccccc
+  <button (click)="getIsToken()">Back</button>
+  <ng-container *ngTemplateOutlet="logo"></ng-container>
+</ng-container>
+<ng-template #logo>
+  coppyright
+</ng-template>

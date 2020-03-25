@@ -1,0 +1,12 @@
+<div [ngStyle]="{'max-width': '50%','magin': 'auto'}">
+  <div>
+    <button (click)="toggle(1)" [className]="token == 1 ? 'active' : ''">Tab1</button>
+    <button (click)="toggle(2)" [className]="token == 2 ? 'active' : ''">Tab2</button>
+    <button (click)="toggle(3)" [className]="token == 3 ? 'active' : ''">Tab3</button>
+    <button (click)="toggle(4)" [className]="token == 4 ? 'active' : ''">Tab4</button>
+  </div>
+  <app-tab-content [isToken]="token"
+    (onHandleIsToKen)="getMessage($event)"
+  >
+  </app-tab-content>
+</div>
