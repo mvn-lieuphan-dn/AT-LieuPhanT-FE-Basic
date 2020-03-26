@@ -1,11 +1,11 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter , OnChanges, SimpleChanges} from '@angular/core';
 
 @Component({
   selector: 'app-tab-content',
   templateUrl: './tab-content.component.html',
   styleUrls: ['./tab-content.component.scss']
 })
-export class TabContentComponent implements OnInit {
+export class TabContentComponent implements OnInit , OnChanges{
   @Input() isToken : number;
   @Output() onHandleIsToKen = new EventEmitter<number>();
   arrResult : any[] = [
@@ -36,5 +36,15 @@ export class TabContentComponent implements OnInit {
     this.isToken = 1;
     this.onHandleIsToKen.emit(this.isToken);
   }
+
+  ngOnChanges( simpleChange : SimpleChanges) {
+    console.log('on change :')
+    console.log(this.isToken);
+    console.log(simpleChange);
+  }
+
+  // SimpleChanges() {
+
+  // }
   
 }

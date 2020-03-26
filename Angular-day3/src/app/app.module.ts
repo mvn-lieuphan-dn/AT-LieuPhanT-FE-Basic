@@ -7,7 +7,7 @@ import { TabContentComponent } from './tab-content/tab-content.component';
 @NgModule({
   declarations: [
     AppComponent,
-    TabContentComponent
+    TabContentComponent,
   ],
   imports: [
     BrowserModule
