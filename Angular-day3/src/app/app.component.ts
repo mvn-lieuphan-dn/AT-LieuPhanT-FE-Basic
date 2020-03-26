@@ -7,15 +7,15 @@ import { Component, OnInit, OnChanges } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'Angular-day3';
-  token : number = 1;
+  token = 1;
   ngOnInit() {
   }
 
-  clickTab(e : any) {
+  clickTab(e: any) {
     this.token = e;
   }
 
-  getMessage(x : number) {
+  getMessage(x: number) {
     this.token = x;
   }
 
