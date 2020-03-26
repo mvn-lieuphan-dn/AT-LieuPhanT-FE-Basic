@@ -1,0 +1,11 @@
+<div class="tab">
+  <div>
+    <button (click)="clickTab(1)" class="btn" [ngClass]="{active: token === 1}">Tab1</button>
+    <button (click)="clickTab(2)" class="btn" [ngClass]="{active: token === 2}">Tab2</button>
+    <button (click)="clickTab(3)" class="btn" [ngClass]="{active: token === 3}">Tab3</button>
+    <button (click)="clickTab(4)" class="btn" [ngClass]="{active: token === 4}">Tab4</button>
+  </div>
+  <app-tab-content [isToken]="token"
+    (onHandleIsToKen)="getMessage($event)">
+  </app-tab-content>
+</div>
