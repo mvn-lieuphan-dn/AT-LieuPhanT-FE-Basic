@@ -1,21 +1,11 @@
-<div>
-  <ng-container *ngIf="isToken == 1">
-    <img class ="img-tab" src="../../assets/images/img1.jpg" alt=""><br>
-  </ng-container> -->
-  <ng-container *ngIf="isToken == 2">
-    <img class ="img-tab" src="../../assets/images/img6.jpg" alt=""><br>
-  </ng-container>
-  <ng-container *ngIf="isToken == 3">
-    <img class ="img-tab" src="../../assets/images/img5.jpg" alt=""><br>
-  </ng-container>
-  <ng-container *ngIf="isToken == 4">
-    <img class ="img-tab" src="../../assets/images/img4.jpg" alt=""><br>
-  </ng-container>
-
-  <div class="footer-tab">
-  <ng-container *ngTemplateOutlet="logo"></ng-container> 
-    <button *ngIf="isToken == 4" class="btn-back" (click)="getIsToken()">Back</button>
-  </div>
+<div *ngFor="let item of arrResult">
+  <ng-container *ngIf="isToken == item.token">
+    <img class ="img-tab" src="../../assets/images/{{item.img}}" alt=""><br>
+    <div class="footer-tab">
+      <ng-container *ngTemplateOutlet="logo"></ng-container> 
+        <button *ngIf="isToken == 4" class="btn-back" (click)="getIsToken()">Back</button>
+      </div>
+  </ng-container>  
 </div>
 <ng-template #logo>
   coppyright

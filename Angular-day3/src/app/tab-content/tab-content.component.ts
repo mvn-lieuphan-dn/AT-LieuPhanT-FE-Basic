@@ -1,5 +1,4 @@
-import { Component, OnInit, Input, OnChanges, Output, EventEmitter } from '@angular/core';
-// import { EventEmitter } from 'protractor';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-tab-content',
@@ -9,9 +8,28 @@ import { Component, OnInit, Input, OnChanges, Output, EventEmitter } from '@angu
 export class TabContentComponent implements OnInit {
   @Input() isToken : number;
   @Output() onHandleIsToKen = new EventEmitter<number>();
+  arrResult : any[] = [
+    {
+      token: 1,
+      img: 'img1.jpg'
+    },
+    {
+      token: 2,
+      img: 'img6.jpg'
+    },
+    {
+      token: 3,
+      img: 'img4.jpg'
+    },
+    {
+      token: 4,
+      img: 'img5.jpg'
+    }
+  ]
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.arrResult);
   }
   
   getIsToken() {// back 1

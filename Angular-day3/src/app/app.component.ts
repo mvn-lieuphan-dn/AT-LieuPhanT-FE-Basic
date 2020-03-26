@@ -8,8 +8,6 @@ import { Component, OnInit, OnChanges } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'Angular-day3';
   token : number = 1;
-  // back : number;
-  // resultMessage : number;
   ngOnInit() {
   }
 
