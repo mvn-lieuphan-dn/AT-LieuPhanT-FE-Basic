@@ -2,11 +2,11 @@
   <ng-container *ngIf="isToken == item.token">
     <img class ="img-tab" src="../../assets/images/{{item.img}}" alt=""><br>
     <div class="footer-tab">
-      <ng-container *ngTemplateOutlet="logo"></ng-container> 
+      <ng-container *ngTemplateOutlet="coppy"></ng-container> 
         <button *ngIf="isToken == 4" class="btn-back" (click)="getIsToken()">Back</button>
-      </div>
+    </div>
   </ng-container>  
 </div>
-<ng-template #logo>
+<ng-template #coppy>
   coppyright
 </ng-template>

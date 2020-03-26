@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
   }
 
-  toggle(e : any) {
+  clickTab(e : any) {
     this.token = e;
   }
 

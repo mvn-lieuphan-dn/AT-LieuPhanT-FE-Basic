@@ -11,7 +11,7 @@ export class TabContentComponent implements OnInit {
   arrResult : any[] = [
     {
       token: 1,
-      img: 'img1.jpg'
+      img: 'img4.jpg'
     },
     {
       token: 2,
@@ -19,7 +19,7 @@ export class TabContentComponent implements OnInit {
     },
     {
       token: 3,
-      img: 'img4.jpg'
+      img: 'img1.jpg'
     },
     {
       token: 4,
