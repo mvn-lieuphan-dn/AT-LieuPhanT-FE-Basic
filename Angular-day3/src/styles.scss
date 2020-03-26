@@ -1,7 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-.active {
-  background-color: gray;
-}
+
 
 .tab {
   width: 50%;
@@ -21,4 +19,12 @@
 .btn-back {
   display: flex;
   margin-left: auto;
+}
+
+.btn {
+  background-color: green;
+}
+
+.active {
+  background-color: rgb(110, 116, 105) !important; // status
 }
