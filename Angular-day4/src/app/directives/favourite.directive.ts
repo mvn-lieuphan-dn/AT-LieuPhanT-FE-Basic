@@ -18,5 +18,4 @@ export class FavouriteDirective {
       else this.el.nativeElement.querySelector('i').style.color = "grey";
     }
   }
-
 }
