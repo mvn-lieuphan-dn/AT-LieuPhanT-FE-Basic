@@ -1,6 +1,6 @@
 <ul class="product-list">
     <li class="product-item" *ngFor="let product of arrProducts">
-      <div appFavourite [dataResult] = "product" >
+      <div appFavourite [dataResult]="product">
         <div>
             <img src="../assets/images/{{ product.img }}" alt="">
             <h4>{{ product.name }}</h4>
