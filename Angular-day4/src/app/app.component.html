@@ -1,0 +1,17 @@
+<ul class="product-list">
+    <li class="product-item" *ngFor="let product of arrProducts">
+      <div >
+        <img src="" alt="">
+          <div>
+            <img src="" alt="">
+            <h4>{{ product.name }}</h4>
+            <p>{{ product.detail }}</p>
+            <p>{{ product.isToken }}</p>
+          </div>
+        <div>
+          <i appFavourite [dataResult] = "product" class="fa fa-heart"></i>
+          <p >{{ product.amount }}</p>
+        </div>
+      </div>
+    </li>
+</ul>
