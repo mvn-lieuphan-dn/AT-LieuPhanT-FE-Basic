@@ -11,28 +11,28 @@ export class AppComponent implements OnChanges, OnInit{
   isClick = false;
   arrProducts = [{
     id: 1,
-    img: '',
+    img: '1.png',
     isToken: false,
     name: 'product1',
     detail: 'detail........',
     amount: 3
   },{
     id: 2,
-    img: '',
+    img: '2.jpg',
     isToken: false,
     name: 'product2',
     detail: 'detail........',
     amount: 5
   },{
     id: 3,
-    img: '',
+    img: '3.jpg',
     isToken: false,
     name: 'product3',
     detail: 'detail........',
     amount: 7
   },{
     id: 4,
-    img: '',
+    img: '4.jpg',
     isToken: false,
     name: 'product4',
     detail: 'detail........',
